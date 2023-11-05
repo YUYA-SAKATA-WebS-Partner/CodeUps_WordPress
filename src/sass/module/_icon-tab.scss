@@ -1,0 +1,88 @@
+@use "global" as *;
+
+.icon-tab {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-tab__tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(myrem(102), 27.78%, myrem(300));
+  box-shadow: myrem(2) myrem(2) myrem(4) rgba($color: #000000, $alpha: 0.25);
+  background-color: $green2;
+  color: $green;
+  padding: myrem(8) 0;
+  cursor: pointer;
+  transition: background-color .3s;
+  @include mq(md) {
+    padding: myrem(27) 0;
+    // height: myrem(64);
+  }
+}
+
+.icon-tab__tab:hover,
+.icon-tab__tab.current {
+  background-color: $green;
+}
+
+.icon-tab__image {
+  width: myrem(64);
+  height: myrem(64);
+}
+
+.icon-tab__button {
+  position: relative;
+  text-align: center;
+  height: inherit;
+  font-size: myrem(14);
+  font-weight: $regular;
+  color: $green;
+  transition: color .3s;
+  @include mq(md) {
+    font-size: myrem(24);
+    padding: 0 0 0 myrem(72);
+  }
+}
+
+.icon-tab__tab:hover .icon-tab__button,
+.icon-tab__tab.current .icon-tab__button {
+  color: $white;
+}
+
+.icon-tab__button::before {
+  display: none;
+  content: "";
+  width: myrem(64);
+  height: myrem(64);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-image: url(../images/common/whale_icon-green.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image .3s;
+  @include mq(md) {
+    display: inline-block;
+  }
+}
+
+.icon-tab__tab:hover .icon-tab__button::before,
+.icon-tab__tab.current .icon-tab__button::before {
+  background-image: url(../images/common/whale_icon.png);
+}
+
+// .icon-tab__text {
+//   text-align: center;
+//   // color: $green;
+//   font-size: myrem(14);
+//   font-weight: $regular;
+//   @include mq(md) {
+//     // height: inherit;
+//     font-size: myrem(24);
+//     margin-left: myrem(8);
+//   }
+// }
+

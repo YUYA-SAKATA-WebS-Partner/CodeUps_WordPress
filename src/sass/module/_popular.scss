@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.popular__items {
+  margin-top: myrem(24);
+}
+
+.popular__item:not(:first-child) {
+  margin-top: myrem(24);
+}
+
+.popular__item>a {
+  display: flex;
+  gap: myrem(16);
+  padding: myrem(16);
+  box-shadow: myrem(2) myrem(2) myrem(10) rgba($color: #000000, $alpha: 0.25);
+  transition: opacity .3s;
+}
+
+.popular__item>a:hover {
+  opacity: .6;
+}
+
+.popular__image {
+  width: calc(100% * (121 / 262));
+}
+
+.popular__image img {
+  aspect-ratio: 121 / 90;
+  object-fit: cover;
+}
+
+.popular__box {
+  width: calc(100% * (125 / 262));
+}
+
+.popular__time {
+  display: block;
+  font-size: myrem(12);
+  font-weight: $regular;
+  line-height: 1.5;
+  color: $black;
+  font-family: $english-font-family;
+}
+
+.popular__box-title {
+  font-size: myrem(16);
+  font-weight: $medium;
+  color: $black;
+  margin-top: myrem(2);
+}
+

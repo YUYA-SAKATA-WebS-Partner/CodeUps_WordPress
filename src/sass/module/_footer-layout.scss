@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.footer-layout {
+  margin-top: myrem(104);
+  @include mq(md) {
+    margin-top: myrem(157);
+  }
+}
+
+.footer-layout--nomargin {
+  margin-top: 0;
+  @include mq(md) {
+    margin: 0;
+  }
+}
+
+.footer-layout--sub {
+  margin-top: myrem(148);
+  @include mq(md) {
+    margin-top: myrem(163);
+  }
+}

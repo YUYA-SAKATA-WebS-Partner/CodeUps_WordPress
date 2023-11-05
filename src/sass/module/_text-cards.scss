@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.text-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: myrem(40);
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: myrem(80) myrem(40);
+  }
+}
+
+.text-cards__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: myrem(600);
+  margin: 0 auto;
+  @include mq(md) {
+    margin: 0;
+  }
+}

@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.category-tag {
+  display: inline-block;
+  font-size: myrem(12);
+  font-weight: $regular;
+  line-height: calc(22 / 12);
+  color: $green;
+  border: myrem(1) solid $green;
+  padding: myrem(3) myrem(11);
+  width: fit-content;
+  @include mq(md) {
+    padding: myrem(4) myrem(15);
+  }
+}

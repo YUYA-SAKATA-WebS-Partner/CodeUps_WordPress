@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.gallery__inner {
+  position: relative;
+}
+
+.gallery__inner::after {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    right: calc(50% - min(vw(1280, 615), myrem(640)));
+    top: myrem(-80);
+    z-index: 10;
+    display: inline-block;
+    width: myrem(301);
+    height: myrem(138);
+    background-image: url(../images/common/bg-fish.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.gallery__body {
+  margin-top: myrem(40);
+  @include mq(md) {
+    margin-top: myrem(80);
+  }
+}
+
+.gallery__body {
+  display: grid;
+  gap: myrem(8);
+  grid-auto-flow: dense;
+  @include mq(md) {
+    grid-template-columns: repeat(13, 1fr);
+  }
+}
+
+.gallery__image:nth-child(6n+1),
+.gallery__image:nth-child(6n+6) {
+  @include mq(md) {
+    grid-column: span 6;
+    grid-row: span 2;
+  }
+}
+
+.gallery__image:nth-child(6n+1) img,
+.gallery__image:nth-child(6n+6) img {
+  aspect-ratio: 492 / 746;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__image:nth-child(6n+2),
+.gallery__image:nth-child(6n+3),
+.gallery__image:nth-child(6n+4),
+.gallery__image:nth-child(6n+5) {
+  @include mq(md) {
+    grid-column: span 7;
+    grid-row: span 1;
+  }
+}
+
+.gallery__image:nth-child(6n+2) img,
+.gallery__image:nth-child(6n+3) img,
+.gallery__image:nth-child(6n+4) img,
+.gallery__image:nth-child(6n+5) img {
+  aspect-ratio: 580 / 369;
+  height: 100%;
+  object-fit: cover;
+}

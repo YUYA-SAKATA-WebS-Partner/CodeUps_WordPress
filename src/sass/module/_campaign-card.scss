@@ -1,0 +1,118 @@
+@use "global" as *;
+
+.campaign-card {
+  box-shadow: myrem(2) myrem(2) myrem(10) rgba($color: #000000, $alpha: 0.25);
+}
+
+.campaign-card__image {
+  aspect-ratio: 280 / 188;
+  @include mq(md) {
+    aspect-ratio: 333 / 223;
+  }
+}
+
+.campaign-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campaign-card__body {
+  padding: myrem(16) myrem(16) myrem(24);
+  @include mq(md) {
+    padding: myrem(24) myrem(16) myrem(40);
+  }
+}
+
+.campaign-card__title {
+  margin-top: myrem(4);
+  padding-bottom: myrem(7);
+  font-size: myrem(16);
+  font-weight: $medium;
+  line-height: 1.5;
+  color: $black;
+  border-bottom: myrem(1) solid $green;
+}
+
+.campaign-card__box {
+  margin-top: myrem(8);
+  @include mq(md) {
+    margin-top: myrem(16);
+    padding: 0 myrem(19);
+  }
+}
+
+.campaign-card__note {
+  @include mq(md) {
+    text-align: center;
+    font-weight: $regular;
+    color: $black;
+    font-size: myrem(16);
+    line-height: calc(24 / 16);
+    padding-left: myrem(37);
+  }
+}
+
+.campaign-card__price-box {
+  display: flex;
+  align-items: flex-end;
+  gap: myrem(40);
+  margin-top: myrem(8);
+  justify-content: center;
+}
+
+.campaign-card__price {
+  position: relative;
+  font-size: myrem(20);
+  font-weight: $bold;
+  font-family: $sub-font-family;
+  line-height: 1.2;
+  color: $black;
+  @include mq(md) {
+    font-size: myrem(24);
+  }
+}
+
+.campaign-card__price::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: myrem(3);
+  background-color: $red;
+}
+
+.campaign-card__discount {
+  font-size: myrem(32);
+  font-weight: $bold;
+  line-height: 1;
+  color: $green;
+  font-family: $sub-font-family;
+  @include mq(md) {
+    font-size: myrem(40);
+  }
+}
+
+.campaign-card__text {
+  margin-top: myrem(24);
+}
+
+.campaign-card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: myrem(32);
+}
+
+.campaign-card__date {
+  font-size: myrem(16);
+  font-weight: $bold;
+  line-height: calc(18 / 16);
+  font-family: $sub-font-family;
+  color: $green;
+  text-align: center;
+}

@@ -1,0 +1,81 @@
+@use "global" as *;
+
+.accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $green;
+  padding: myrem(12) myrem(16) myrem(15);
+  cursor: pointer;
+  transition: opacity .3s;
+  @include mq(md) {
+    padding: myrem(25) myrem(40);
+  }
+}
+
+.accordion__header:hover {
+  opacity: .6;
+}
+
+.accordion__title {
+  font-size: myrem(16);
+  font-weight: $regular;
+  color: $white;
+  @include mq(md) {
+    font-size: myrem(20);
+  }
+}
+
+
+.accordion__button {
+  position: relative;
+  width: myrem(28);
+  height: myrem(28);
+}
+
+.accordion__button span {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: myrem(1);
+  background-color: $white;
+}
+
+.accordion__button span:nth-child(2) {
+  transform: rotate(90deg);
+  transition: transform .3s;
+}
+
+.accordion__header.is-open .accordion__button span:nth-child(2) {
+  transform: rotate(180deg);
+}
+
+.accordion__header.stay .accordion__button span:nth-child(2) {
+  transform: rotate(180deg);
+}
+
+.accordion__header.stay.is-open .accordion__button span:nth-child(2) {
+  transform: rotate(90deg);
+}
+
+.accordion__body {
+  padding: myrem(22) myrem(16) myrem(23);
+  border: myrem(1) solid $green;
+  display: none;
+  @include mq(md) {
+    padding: myrem(39) myrem(40);
+    margin-top: myrem(15);
+  }
+}
+
+.accordion__body.stay {
+  display: block;
+}
+
+.accordion__text.text {
+  line-height: 1.44;
+  @include mq(md) {
+    line-height: 1.5;
+  };
+}

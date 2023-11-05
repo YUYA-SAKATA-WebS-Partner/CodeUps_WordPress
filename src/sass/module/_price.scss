@@ -1,0 +1,72 @@
+@use "global" as *;
+
+.price {
+  background-color: $green2;
+  padding: myrem(80) 0 myrem(84);
+  @include mq(md) {
+    padding: myrem(100) 0;
+  }
+}
+
+.price__inner {
+  position: relative;
+}
+
+.price__inner::before {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    bottom: myrem(-40);
+    left: calc(50% - min(vw(1242, 596), myrem(621)));
+    z-index: 10;
+    display: inline-block;
+    width: myrem(437);
+    height: myrem(201);
+    background-image: url(../images/common/price-bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.price__body {
+  display: flex;
+  flex-direction: column;
+  gap: myrem(40);
+  margin-top: myrem(29);
+  @include mq(md) {
+    flex-direction: row-reverse;
+    gap: myrem(90);
+    margin-top: myrem(40);
+  }
+}
+
+.price__image {
+  aspect-ratio: 345 / 227;
+  @include mq(md) {
+    aspect-ratio: 492 / 746;
+    width: calc(calc(100% - myrem(90)) / 2);
+  }
+}
+
+.price__image img {
+  object-fit: cover;
+}
+
+.price__box {
+  width: 100%;
+  @include mq(md) {
+    width: calc(calc(100% - myrem(90)) / 2);
+  }
+}
+
+.price__list:not(:first-child) {
+  margin-top: myrem(38);
+}
+
+.price__button {
+  text-align: center;
+  margin-top: myrem(40);
+  @include mq(md) {
+    margin-top: myrem(80);
+  }
+}
