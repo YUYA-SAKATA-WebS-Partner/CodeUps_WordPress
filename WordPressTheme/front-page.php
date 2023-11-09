@@ -15,10 +15,8 @@
       <div class="swiper-wrapper">
         <div class="campaign__panel panel swiper-slide">
           <picture class="panel__image">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign1.webp"
-              type="image/webp">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign1.jpg"
-              alt="多数のカラフルな魚が泳いでいる様子">
+            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign1.webp" type="image/webp">
+            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign1.jpg" alt="多数のカラフルな魚が泳いでいる様子">
           </picture>
           <div class="panel__body">
             <span class="panel__category category-tag">ライセンス講習</span>
@@ -34,10 +32,8 @@
         </div>
         <div class="campaign__panel panel swiper-slide">
           <picture class="panel__image">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign2.webp"
-              type="image/webp">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign2.jpg"
-              alt="浜辺から見える島や船の景色">
+            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign2.webp" type="image/webp">
+            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign2.jpg" alt="浜辺から見える島や船の景色">
           </picture>
           <div class="panel__body">
             <span class="panel__category category-tag">体験ダイビング</span>
@@ -53,10 +49,8 @@
         </div>
         <div class="campaign__panel panel swiper-slide">
           <picture class="panel__image">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign3.webp"
-              type="image/webp">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign3.jpg"
-              alt="暗い水中で無数の小さなクラゲがライトアップされている様子">
+            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign3.webp" type="image/webp">
+            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign3.jpg" alt="暗い水中で無数の小さなクラゲがライトアップされている様子">
           </picture>
           <div class="panel__body">
             <span class="panel__category category-tag">体験ダイビング</span>
@@ -72,10 +66,8 @@
         </div>
         <div class="campaign__panel panel swiper-slide">
           <picture class="panel__image">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign4.webp"
-              type="image/webp">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign4.jpg"
-              alt="海面から4人のダイバーが顔を出している様子">
+            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign4.webp" type="image/webp">
+            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign4.jpg" alt="海面から4人のダイバーが顔を出している様子">
           </picture>
           <div class="panel__body">
             <span class="panel__category category-tag">ファンダイビング</span>
@@ -92,10 +84,8 @@
         <div class="campaign__panel swiper-slide">
           <div class="panel">
             <picture class="panel__image">
-              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign1.webp"
-                type="image/webp">
-              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign1.jpg"
-                alt="多数のカラフルな魚が泳いでいる様子">
+              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign1.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign1.jpg" alt="多数のカラフルな魚が泳いでいる様子">
             </picture>
             <div class="panel__body">
               <span class="panel__category category-tag">ライセンス講習</span>
@@ -113,10 +103,8 @@
         <div class="campaign__panel swiper-slide">
           <div class="panel">
             <picture class="panel__image">
-              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign2.webp"
-                type="image/webp">
-              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign2.jpg"
-                alt="浜辺から見える島や船の景色">
+              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign2.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign2.jpg" alt="浜辺から見える島や船の景色">
             </picture>
             <div class="panel__body">
               <span class="panel__category category-tag">体験ダイビング</span>
@@ -134,10 +122,8 @@
         <div class="campaign__panel swiper-slide">
           <div class="panel">
             <picture class="panel__image">
-              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign3.webp"
-                type="image/webp">
-              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign3.jpg"
-                alt="暗い水中で無数の小さなクラゲがライトアップされている様子">
+              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign3.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign3.jpg" alt="暗い水中で無数の小さなクラゲがライトアップされている様子">
             </picture>
             <div class="panel__body">
               <span class="panel__category category-tag">体験ダイビング</span>
@@ -154,10 +140,8 @@
         </div>
         <div class="campaign__panel panel swiper-slide">
           <picture class="panel__image">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign4.webp"
-              type="image/webp">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign4.jpg"
-              alt="海面から4人のダイバーが顔を出している様子">
+            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign4.webp" type="image/webp">
+            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/campaign4.jpg" alt="海面から4人のダイバーが顔を出している様子">
           </picture>
           <div class="panel__body">
             <span class="panel__category category-tag">ファンダイビング</span>
@@ -189,24 +173,16 @@
     <div class="about__container">
       <div class="about__images">
         <picture class="about__thin-image">
-          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about2.webp"
-            media="(min-width: 768px)" type="image/webp">
-          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about2.jpg"
-            media="(min-width: 768px)">
-          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about2-sp.webp"
-            type="image/webp">
-          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about2-sp.jpg"
-            alt="瓦葺きの屋根に乗っているシーサーと青い空">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about2.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about2.jpg" media="(min-width: 768px)">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about2-sp.webp" type="image/webp">
+          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about2-sp.jpg" alt="瓦葺きの屋根に乗っているシーサーと青い空">
         </picture>
         <picture class="about__wide-image">
-          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about.webp"
-            media="(min-width: 768px)" type="image/webp">
-          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about.jpg"
-            media="(min-width: 768px)">
-          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about-sp.webp"
-            type="image/webp">
-          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about-sp.jpg"
-            alt="海中で２匹の黄色い魚が向かい合っている様子">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about.jpg" media="(min-width: 768px)">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about-sp.webp" type="image/webp">
+          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about-sp.jpg" alt="海中で２匹の黄色い魚が向かい合っている様子">
         </picture>
       </div>
       <div class="about__body">
@@ -233,10 +209,8 @@
     </div>
     <div class="information__body">
       <picture class="information__image colorbox js-colorbox">
-        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/information.webp"
-          type="image/webp">
-        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/information.jpg"
-          alt="珊瑚の群生の近くで多様な魚たちが泳いでいる様子">
+        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/information.webp" type="image/webp">
+        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/information.jpg" alt="珊瑚の群生の近くで多様な魚たちが泳いでいる様子">
       </picture>
       <div class="information__box">
         <h3 class="information__heading">ライセンス講習</h3>
@@ -260,10 +234,8 @@
     <div class="blog__cards cards">
       <a href="#" class="cards__item card">
         <picture class="card__image">
-          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/blog-card.webp"
-            type="image/webp">
-          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/blog-card.jpg"
-            alt="赤い珊瑚に無数のイソギンチャクがついている様子">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/blog-card.webp" type="image/webp">
+          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/blog-card.jpg" alt="赤い珊瑚に無数のイソギンチャクがついている様子">
         </picture>
         <div class="card__body">
           <time class="card__date" datetime="2023-11-17">2023.11/17</time>
@@ -274,10 +246,8 @@
       </a>
       <a href="#" class="cards__item card">
         <picture class="card__image">
-          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/blog-card2.webp"
-            type="image/webp">
-          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/blog-card2.jpg"
-            alt="陽がさす海中をウミガメが泳いでいる様子">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/blog-card2.webp" type="image/webp">
+          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/blog-card2.jpg" alt="陽がさす海中をウミガメが泳いでいる様子">
         </picture>
         <div class="card__body">
           <time class="card__date" datetime="2023-11-17">2023.11/17</time>
@@ -288,10 +258,8 @@
       </a>
       <a href="#" class="cards__item card">
         <picture class="card__image">
-          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/blog-card3.webp"
-            type="image/webp">
-          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/blog-card3.jpg"
-            alt="カクレクマノミがイソギンチャクの間から顔を覗かせている様子">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/blog-card3.webp" type="image/webp">
+          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/blog-card3.jpg" alt="カクレクマノミがイソギンチャクの間から顔を覗かせている様子">
         </picture>
         <div class="card__body">
           <time class="card__date" datetime="2023-11-17">2023.11/17</time>
@@ -325,10 +293,8 @@
             <h3 class="text-card__title">ここにタイトルが入ります。ここにタイトル</h3>
           </div>
           <picture class="text-card__image colorbox js-colorbox">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/voice1.webp"
-              type="image/webp">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/voice1.jpg"
-              alt="麦わら帽子をかぶった笑顔の女性">
+            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/voice1.webp" type="image/webp">
+            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/voice1.jpg" alt="麦わら帽子をかぶった笑顔の女性">
           </picture>
         </div>
         <div class="text-card__body">
@@ -347,8 +313,7 @@
             <h3 class="text-card__title">ここにタイトルが入ります。ここにタイトル</h3>
           </div>
           <picture class="text-card__image colorbox js-colorbox">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/voice2.webp"
-              type="image/webp">
+            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/voice2.webp" type="image/webp">
             <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/voice2.jpg" alt="サムズアップしている男性">
           </picture>
         </div>
@@ -374,12 +339,9 @@
     </div>
     <div class="price__body">
       <picture class="price__image colorbox js-colorbox">
-        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price.webp"
-          media="(min-width:768px)" type="image/webp">
-        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price.jpg"
-          media="(min-width:768px)">
-        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price-sp.webp"
-          type="image/webp">
+        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price.webp" media="(min-width:768px)" type="image/webp">
+        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price.jpg" media="(min-width:768px)">
+        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price-sp.webp" type="image/webp">
         <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price-sp.jpg" alt="海中をウミガメが泳いでいる様子">
       </picture>
       <div class="price__box">
@@ -463,39 +425,4 @@
   </div>
 </section>
 
-<!-- contact -->
-<section class="contact sub-contact-layout">
-  <div class="contact__inner inner">
-    <div class="contact__body contact-banner">
-      <div class="contact-banner__access access">
-        <div class="access__logo">
-          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/logo-green.png" alt="CodeUps">
-        </div>
-        <div class="access__body">
-          <div class="access__box">
-            <p class="access__text">沖縄県那覇市1-1</p>
-            <p class="access__text">TEL:0120-000-0000</p>
-            <p class="access__text">営業時間:8:30-19:00</p>
-            <p class="access__text">定休日:毎週火曜日</p>
-          </div>
-          <div class="access__map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9517.353159012291!2d127.67425690889368!3d26.23380587573383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56bd2da6906ad%3A0x91b298aa63dcb532!2z44CSOTAwLTAwMDIg5rKW57iE55yM6YKj6KaH5biC5puZ77yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1693257610667!5m2!1sja!2sjp"
-              style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="contact-banner__contact">
-        <div class="contact-banner__title">
-          <span class="contact-banner__main-title">Contact</span>
-          <h2 class="contact-banner__sub-title">お問い合わせ</h2>
-        </div>
-        <p class="contact-banner__text">ご予約・お問い合わせはコチラ</p>
-        <div class="contact-banner__button">
-          <a href="#" class="button"><span>Contact us</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <?php get_footer(); ?>
