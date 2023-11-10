@@ -139,36 +139,6 @@ jQuery(function ($) {
     }
   });
 
-  // カテゴリータブ
-  // var tabLink = $(".js-tab-item");
-  // // var limit = 4;
-  // $(".js-campaign-item").css('display','none');
-  // $(".js-campaign-item").css('display','flex');
-  // // for(var i = 0 ; i < limit ; i++) {
-  // // 	var limitNews = $(".news-content")[i];
-  // // 	$(limitNews).fadeIn();
-  // // }
-  // $(tabLink).click(function(){
-  // 	$(tabLink).removeClass("is-active");
-  // 	$(this).addClass("is-active");
-  // 	var filter = $(this).attr('data-filter');
-  // 	if (filter == 'category-all') {
-  // 		$(".js-campaign-item").css('display','none');
-  // 		$(".js-campaign-item").fadeIn();
-  // 		// for(i = 0 ; i < limit ; i++) {
-  // 		// 	limitNews = $(".js-campaign-item")[i];
-  // 		// 	$(limitNews).fadeIn();
-  // 		// }
-  // 	} else {
-  // 		$(".js-campaign-item").css('display','none');
-  //     $(".js-campaign-item").filter('[data-category = "' + filter + '"]').fadeIn();
-  // 		// for(i = 0 ; i < limit ; i++) {
-  // 		// 	limitNews = $(".js-campaign-item").filter('[data-category = "' + filter + '"]')[i];
-  // 		// 	$(limitNews).fadeIn();
-  // 		// }
-  // 	}
-  // });
-
   // =============================
   // カテゴリータブ(campaign,voice)
   // =============================
@@ -196,6 +166,14 @@ jQuery(function ($) {
   // =============================
   $('.js-accordion-header').click(function () {
     $(this).next('.accordion__body').slideToggle(300);
+    $(this).toggleClass('is-open');
+  });
+
+  // =============================
+  // アーカイブアコーディオン
+  // =============================
+  $('.js-archive-accordion__header').click(function () {
+    $(this).next('.archive-accordion__body').slideToggle(300);
     $(this).toggleClass('is-open');
   });
 
@@ -230,7 +208,7 @@ jQuery(function ($) {
       'object-fit': 'cover'
     });
     modal.css('display', 'block');
-    $('.modal__content').css('width', 'min(63.89%, 920px)');
+    $('.modal__content').css('width', 'min(92%, 920px)');
     $('body').css('overflow', 'hidden'); // スクロールを無効にする
 
     modal.addClass('show');
@@ -241,7 +219,7 @@ jQuery(function ($) {
       'object-fit': 'cover'
     });
     modal.css('display', 'block');
-    $('.modal__content').css('width', 'min(32.84%, 473px)');
+    $('.modal__content').css('width', 'min(84%, 473px)');
     $('body').css('overflow', 'hidden'); // スクロールを無効にする
 
     modal.addClass('show');
@@ -256,6 +234,24 @@ jQuery(function ($) {
     $('.modal__content').css('width', 'initial');
     $('body').css('overflow', 'auto'); // スクロールを有効に戻す
   }
+
+  // =============================
+  // footer リンク(information)
+  // =============================
+  $(document).ready(function () {
+    // 現在のURLからクエリパラメータを抽出
+    var urlParams = new URLSearchParams(window.location.search);
+
+    // 'tab' キーに関連する値を取得
+    var activeTab = urlParams.get("tab");
+
+    // クエリパラメータ 'tab' が存在するかチェック
+    if (activeTab) {
+      // すべてのタブを非表示にし、アクティブなタブを表示
+      $(".js-information-tab, .js-information-card").removeClass('current');
+      $('[data-tab="' + activeTab + '"]').addClass('current');
+    }
+  });
 
   // =============================
   // information タブ

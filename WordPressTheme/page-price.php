@@ -9,8 +9,8 @@
       <div class="page-price__table price-table">
         <div class="price-table__heading-box">
           <picture class="price-table__iamge">
-            <source srcset="./assets/images/common/whale_icon.webp" type="image/webp">
-            <img src="./assets/images/common/whale_icon.png" alt="クジラのアイコン">
+            <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/whale_icon.webp" type="image/webp">
+            <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/whale_icon.png" alt="クジラのアイコン">
           </picture>
           <h2 class="price-table__heading">ライセンス講習</h2>
         </div>
@@ -26,8 +26,8 @@
       <div class="page-price__table price-table">
         <div class="price-table__heading-box">
           <picture class="price-table__iamge">
-            <source srcset="./assets/images/common/whale_icon.webp" type="image/webp">
-            <img src="./assets/images/common/whale_icon.png" alt="クジラのアイコン">
+            <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/whale_icon.webp" type="image/webp">
+            <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/whale_icon.png" alt="クジラのアイコン">
           </picture>
           <h2 class="price-table__heading">体験ダイビング</h2>
         </div>
@@ -45,8 +45,8 @@
       <div class="page-price__table price-table">
         <div class="price-table__heading-box">
           <picture class="price-table__iamge">
-            <source srcset="./assets/images/common/whale_icon.webp" type="image/webp">
-            <img src="./assets/images/common/whale_icon.png" alt="クジラのアイコン">
+            <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/whale_icon.webp" type="image/webp">
+            <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/whale_icon.png" alt="クジラのアイコン">
           </picture>
           <h2 class="price-table__heading">ファンダイビング</h2>
         </div>
@@ -64,8 +64,8 @@
       <div class="page-price__table price-table">
         <div class="price-table__heading-box">
           <picture class="price-table__iamge">
-            <source srcset="./assets/images/common/whale_icon.webp" type="image/webp">
-            <img src="./assets/images/common/whale_icon.png" alt="クジラのアイコン">
+            <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/whale_icon.webp" type="image/webp">
+            <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/whale_icon.png" alt="クジラのアイコン">
           </picture>
           <h2 class="price-table__heading">スペシャルダイビング</h2>
         </div>

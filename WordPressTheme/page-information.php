@@ -27,8 +27,8 @@
               </div>
             </div>
             <picture class="information-card__image">
-              <source srcset="./assets/images/common/diving-info1.webp" type="image/webp">
-              <img src="./assets/images/common/diving-info1.jpg" alt="5人のダイバーが海面を泳いでいる様子">
+              <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/diving-info1.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/diving-info1.jpg" alt="5人のダイバーが海面を泳いでいる様子">
             </picture>
           </div>
         </div>
@@ -42,8 +42,8 @@
                 ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！</div>
             </div>
             <picture class="information-card__image">
-              <source srcset="./assets/images/common/diving-info2.webp" type="image/webp">
-              <img src="./assets/images/common/diving-info2.jpg" alt="小さな魚の群れが泳いでいる様子">
+              <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/diving-info2.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/diving-info2.jpg" alt="小さな魚の群れが泳いでいる様子">
             </picture>
           </div>
         </div>
@@ -57,8 +57,8 @@
                 ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！</div>
             </div>
             <picture class="information-card__image">
-              <source srcset="./assets/images/common/diving-info3.webp" type="image/webp">
-              <img src="./assets/images/common/diving-info3.jpg" alt="5人のダイバーが海面を泳いでいる様子">
+              <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/diving-info3.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/diving-info3.jpg" alt="5人のダイバーが海面を泳いでいる様子">
             </picture>
           </div>
         </div>
