@@ -27,8 +27,8 @@
               <h3 class="text-card__title">ここにタイトルが入ります。ここにタイトル</h3>
             </div>
             <picture class="text-card__image colorbox js-colorbox">
-              <source srcset="./assets/images/common/voice1.webp" type="image/webp">
-              <img src="./assets/images/common/voice1.jpg" alt="麦わら帽子をかぶった笑顔の女性">
+              <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/voice1.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/voice1.jpg" alt="麦わら帽子をかぶった笑顔の女性">
             </picture>
           </div>
           <div class="text-card__body">
@@ -47,8 +47,8 @@
               <h3 class="text-card__title">ここにタイトルが入ります。ここにタイトル</h3>
             </div>
             <picture class="text-card__image colorbox js-colorbox">
-              <source srcset="./assets/images/common/voice2.webp" type="image/webp">
-              <img src="./assets/images/common/voice2.jpg" alt="サムズアップしている男性">
+              <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/voice2.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/voice2.jpg" alt="サムズアップしている男性">
             </picture>
           </div>
           <div class="text-card__body">
@@ -67,8 +67,8 @@
               <h3 class="text-card__title">ここにタイトルが入ります。ここにタイトル</h3>
             </div>
             <picture class="text-card__image colorbox js-colorbox">
-              <source srcset="./assets/images/common/lady_30.webp" type="image/webp">
-              <img src="./assets/images/common/lady_30.jpg" alt="ロングヘアとショートヘアの２人の笑顔の女性">
+              <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/lady_30.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/lady_30.jpg" alt="ロングヘアとショートヘアの２人の笑顔の女性">
             </picture>
           </div>
           <div class="text-card__body">
@@ -87,8 +87,8 @@
               <h3 class="text-card__title">ここにタイトルが入ります。ここにタイトル</h3>
             </div>
             <picture class="text-card__image colorbox js-colorbox">
-              <source srcset="./assets/images/common/lady_20.webp" type="image/webp">
-              <img src="./assets/images/common/lady_20.jpg" alt="風になびく髪の毛を押さえている笑顔の女性">
+              <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/lady_20.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/lady_20.jpg" alt="風になびく髪の毛を押さえている笑顔の女性">
             </picture>
           </div>
           <div class="text-card__body">
@@ -107,8 +107,8 @@
               <h3 class="text-card__title">ここにタイトルが入ります。ここにタイトル</h3>
             </div>
             <picture class="text-card__image colorbox js-colorbox">
-              <source srcset="./assets/images/common/couple_30.webp" type="image/webp">
-              <img src="./assets/images/common/couple_30.jpg" alt="腕を組んでソファーに座っている笑顔のカップル">
+              <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/couple_30.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/couple_30.jpg" alt="腕を組んでソファーに座っている笑顔のカップル">
             </picture>
           </div>
           <div class="text-card__body">
@@ -127,8 +127,8 @@
               <h3 class="text-card__title">ここにタイトルが入ります。ここにタイトル</h3>
             </div>
             <picture class="text-card__image colorbox js-colorbox">
-              <source srcset="./assets/images/common/lady_20-2.webp" type="image/webp">
-              <img src="./assets/images/common/lady_20-2.jpg" alt="横を向いて笑っているロングヘアの女性">
+              <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/lady_20-2.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/lady_20-2.jpg" alt="横を向いて笑っているロングヘアの女性">
             </picture>
           </div>
           <div class="text-card__body">

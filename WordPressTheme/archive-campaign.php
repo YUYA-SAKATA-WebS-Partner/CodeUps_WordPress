@@ -18,8 +18,10 @@
       <div class="page-campaign__items">
         <div class="page-campaign__item panel js-tab-content" data-category="license">
           <picture class="panel__image">
-            <source srcset="./assets/images/common/campaign1.webp" type="image/webp">
-            <img src="./assets/images/common/campaign1.jpg" alt="多数のカラフルな魚が泳いでいる様子">
+            <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/campaign1.webp"
+              type="image/webp">
+            <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/campaign1.jpg"
+              alt="多数のカラフルな魚が泳いでいる様子">
           </picture>
           <div class="panel__body">
             <span class="panel__category category-tag">ライセンス講習</span>
@@ -45,8 +47,10 @@
         </div>
         <div class="page-campaign__item panel js-tab-content" data-category="experience">
           <picture class="panel__image">
-            <source srcset="./assets/images/common/campaign2.webp" type="image/webp">
-            <img src="./assets/images/common/campaign2.jpg" alt="浜辺から見える島や船の景色">
+            <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/campaign2.webp"
+              type="image/webp">
+            <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/campaign2.jpg"
+              alt="浜辺から見える島や船の景色">
           </picture>
           <div class="panel__body">
             <span class="panel__category category-tag">体験ダイビング</span>
@@ -72,8 +76,10 @@
         </div>
         <div class="page-campaign__item panel js-tab-content" data-category="experience">
           <picture class="panel__image">
-            <source srcset="./assets/images/common/campaign3.webp" type="image/webp">
-            <img src="./assets/images/common/campaign3.jpg" alt="多数のカラフルな魚が泳いでいる様子">
+            <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/campaign3.webp"
+              type="image/webp">
+            <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/campaign3.jpg"
+              alt="多数のカラフルな魚が泳いでいる様子">
           </picture>
           <div class="panel__body">
             <span class="panel__category category-tag">体験ダイビング</span>
@@ -99,8 +105,10 @@
         </div>
         <div class="page-campaign__item panel js-tab-content" data-category="diving">
           <picture class="panel__image">
-            <source srcset="./assets/images/common/campaign4.webp" type="image/webp">
-            <img src="./assets/images/common/campaign4.jpg" alt="多数のカラフルな魚が泳いでいる様子">
+            <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/campaign4.webp"
+              type="image/webp">
+            <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/campaign4.jpg"
+              alt="多数のカラフルな魚が泳いでいる様子">
           </picture>
           <div class="panel__body">
             <span class="panel__category category-tag">ファンダイビング</span>

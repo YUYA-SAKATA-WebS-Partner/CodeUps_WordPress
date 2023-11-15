@@ -263,59 +263,60 @@ jQuery(function ($) {
     $('.js-information-card').removeClass('current');
     $('.js-information-card').eq(index).addClass('current');
   });
-});
 
 // =============================
 // フォームバリデーション
 // =============================
-$(document).ready(function () {
-  $('.page-contact__error').hide();
-  // 最初はエラーメッセージを非表示
-  $('#js-form').validate({
-    // フォームのバリデーションルールを設定
-    rules: {
-      name: {
-        required: true
+  $(document).ready(function () {
+    $('.page-contact__error').hide();
+    // 最初はエラーメッセージを非表示
+    $('#js-form').validate({
+      // フォームのバリデーションルールを設定
+      rules: {
+        name: {
+          required: true
+        },
+        mail_address: {
+          required: true,
+          email: true
+        },
+        tel: {
+          required: true
+        },
+        inquiry: {
+          required: true
+        },
+        contents: {
+          required: true
+        }
       },
-      mail_address: {
-        required: true,
-        email: true
+      messages: {
+        name: {
+          required: '※必須項目が入力されていません。<span class="u-mobile"><br>&emsp;</span>入力してください。'
+        },
+        mail_address: {
+          required: '※必須項目が入力されていません。<span class="u-mobile"><br>&emsp;</span>入力してください。'
+        },
+        tel: {
+          required: '※必須項目が入力されていません。<span class="u-mobile"><br>&emsp;</span>入力してください。'
+        },
+        inquiry: {
+          required: '※必須項目が入力されていません。<span class="u-mobile"><br>&emsp;</span>入力してください。'
+        },
+        contents: {
+          required: '※必須項目が入力されていません。<span class="u-mobile"><br>&emsp;</span>入力してください。'
+        }
       },
-      tel: {
-        required: true
-      },
-      inquiry: {
-        required: true
-      },
-      contents: {
-        required: true
+      errorElement: "span",
+      errorPlacement: function errorPlacement(error, element) {
+        $('.page-contact__error-text').empty();
+        // errorにエラーメッセージが格納されている
+        // elementは対象となるinput要素
+        error.appendTo($('.page-contact__error-text'));
+        element.addClass('validation-error');
+        $('.page-contact__error').show();
       }
-    },
-    messages: {
-      name: {
-        required: '※必須項目が入力されていません。<span class="u-mobile"><br>&emsp;</span>入力してください。'
-      },
-      mail_address: {
-        required: '※必須項目が入力されていません。<span class="u-mobile"><br>&emsp;</span>入力してください。'
-      },
-      tel: {
-        required: '※必須項目が入力されていません。<span class="u-mobile"><br>&emsp;</span>入力してください。'
-      },
-      inquiry: {
-        required: '※必須項目が入力されていません。<span class="u-mobile"><br>&emsp;</span>入力してください。'
-      },
-      contents: {
-        required: '※必須項目が入力されていません。<span class="u-mobile"><br>&emsp;</span>入力してください。'
-      }
-    },
-    errorElement: "span",
-    errorPlacement: function errorPlacement(error, element) {
-      $('.page-contact__error-text').empty();
-      // errorにエラーメッセージが格納されている
-      // elementは対象となるinput要素
-      error.appendTo($('.page-contact__error-text'));
-      element.addClass('validation-error');
-      $('.page-contact__error').show();
-    }
+    });
   });
 });
+

@@ -1,5 +1,27 @@
 <?php
 
+/****************************
+WordPress標準機能
+ ****************************/
+function my_setup()
+{
+  add_theme_support('post-thumbnails'); /* アイキャッチ */
+  add_theme_support('automatic-feed-links'); /* RSSフィード */
+  add_theme_support('title-tag'); /* タイトルタグ自動生成 */
+  add_theme_support(
+    'html5',
+    array( /* HTML5のタグで出力 */
+      'search-form',
+      'comment-form',
+      'comment-list',
+      'gallery',
+      'caption',
+    )
+  );
+}
+add_action('after_setup_theme', 'my_setup');
+
+
 function enqueue_custom_assets()
 {
   // Google Fonts
@@ -10,6 +32,7 @@ function enqueue_custom_assets()
   wp_enqueue_style('custom-style', get_theme_file_uri('/assets/css/style.css'), ['swiper-css'], '1.0');
 
   // JavaScript
+  wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.6.0.js');
   wp_enqueue_script('jquery-inview', get_theme_file_uri('/assets/js/jquery.inview.min.js'), ['jquery']);
   wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js', ['jquery']);
   wp_enqueue_script('custom-script', get_theme_file_uri('/assets/js/script.js'), ['jquery', 'jquery-inview', 'swiper-js'], '1.0');
@@ -47,3 +70,20 @@ function Change_objectlabel()
 }
 add_action('init', 'Change_objectlabel');
 add_action('admin_menu', 'Change_menulabel');
+
+/****************************
+抜粋の文字数変更
+ ****************************/
+function custom_excerpt_length($length)
+{
+  return 80;
+}
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
+
+
+/****************************
+管理画面に「ギャラリー」「料金表」「お客様の声」を追加(SCF)
+ ****************************/
+SCF::add_options_page('ギャラリー', 'ギャラリー', 'manage_options', 'theme_options_gallery', 'dashicons-format-gallery', '9');
+SCF::add_options_page('料金表', '料金表', 'manage_options', 'theme_options_price', 'dashicons-money-alt', '9');
+SCF::add_options_page('よくある質問', 'よくある質問', 'manage_options', 'theme_options_faq', 'dashicons-microphone', '9');
