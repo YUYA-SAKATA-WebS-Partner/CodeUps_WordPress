@@ -30,153 +30,58 @@ $sitemap = esc_url(home_url('/sitemap'));
       <div class="swiper-button-next campaign__arrow-next"></div>
     </div>
     <div class="campaign__panels swiper js-top-campaign-swiper">
-      <div class="campaign__panels swiper js-top-campaign-swiper">
-        <div class="swiper-wrapper">
-          <div class="campaign__panel panel swiper-slide">
+      <?php
+      $args = [
+        'post_type' => 'campaign',
+        'post_per_page' => 8
+      ];
+      $the_query = new WP_Query($args);
+      ?>
+      <?php if ($the_query->have_posts()) : ?>
+      <div class="swiper-wrapper">
+        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+        <div class="campaign__panel swiper-slide">
+          <div class="panel">
+            <?php if (has_post_thumbnail()) : ?>
             <picture class="panel__image">
-              <source srcset="./assets/images/common/campaign1.webp" type="image/webp">
-              <img src="./assets/images/common/campaign1.jpg" alt="多数のカラフルな魚が泳いでいる様子">
+              <?php the_post_thumbnail(); ?>
             </picture>
+            <?php else : ?>
+            <picture class="panel__image">
+              <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>">
+            </picture>
+            <?php endif; ?>
             <div class="panel__body">
-              <span class="panel__category category-tag">ライセンス講習</span>
-              <h3 class="panel__title">ライセンス取得</h3>
+              <span class="panel__category category-tag">
+                <?php
+                    $terms = get_the_terms($post->ID, 'campaign_category');
+                    foreach ($terms as $term) {
+                      echo $term->name;
+                    }
+                    ?>
+              </span>
+              <h3 class="panel__title"><?php the_title(); ?></h3>
               <div class="panel__box">
                 <p class="panel__sub-title">全部コミコミ(お一人様)</p>
                 <div class="panel__price-box">
-                  <p class="panel__price">¥56,000</p>
-                  <p class="panel__discount">¥46,000</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="campaign__panel panel swiper-slide">
-            <picture class="panel__image">
-              <source srcset="./assets/images/common/campaign2.webp" type="image/webp">
-              <img src="./assets/images/common/campaign2.jpg" alt="浜辺から見える島や船の景色">
-            </picture>
-            <div class="panel__body">
-              <span class="panel__category category-tag">体験ダイビング</span>
-              <h3 class="panel__title">貸切体験ダイビング</h3>
-              <div class="panel__box">
-                <p class="panel__sub-title">全部コミコミ(お一人様)</p>
-                <div class="panel__price-box">
-                  <p class="panel__price">¥24,000</p>
-                  <p class="panel__discount">¥18,000</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="campaign__panel panel swiper-slide">
-            <picture class="panel__image">
-              <source srcset="./assets/images/common/campaign3.webp" type="image/webp">
-              <img src="./assets/images/common/campaign3.jpg" alt="暗い水中で無数の小さなクラゲがライトアップされている様子">
-            </picture>
-            <div class="panel__body">
-              <span class="panel__category category-tag">体験ダイビング</span>
-              <h3 class="panel__title">ナイトダイビング</h3>
-              <div class="panel__box">
-                <p class="panel__sub-title">全部コミコミ(お一人様)</p>
-                <div class="panel__price-box">
-                  <p class="panel__price">¥10,000</p>
-                  <p class="panel__discount">¥8,000</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="campaign__panel panel swiper-slide">
-            <picture class="panel__image">
-              <source srcset="./assets/images/common/campaign4.webp" type="image/webp">
-              <img src="./assets/images/common/campaign4.jpg" alt="海面から4人のダイバーが顔を出している様子">
-            </picture>
-            <div class="panel__body">
-              <span class="panel__category category-tag">ファンダイビング</span>
-              <h3 class="panel__title">貸切ファンダイビング</h3>
-              <div class="panel__box">
-                <p class="panel__sub-title">全部コミコミ(お一人様)</p>
-                <div class="panel__price-box">
-                  <p class="panel__price">¥20,000</p>
-                  <p class="panel__discount">¥16,000</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="campaign__panel swiper-slide">
-            <div class="panel">
-              <picture class="panel__image">
-                <source srcset="./assets/images/common/campaign1.webp" type="image/webp">
-                <img src="./assets/images/common/campaign1.jpg" alt="多数のカラフルな魚が泳いでいる様子">
-              </picture>
-              <div class="panel__body">
-                <span class="panel__category category-tag">ライセンス講習</span>
-                <h3 class="panel__title">ライセンス取得</h3>
-                <div class="panel__box">
-                  <p class="panel__sub-title">全部コミコミ(お一人様)</p>
-                  <div class="panel__price-box">
-                    <p class="panel__price">¥56,000</p>
-                    <p class="panel__discount">¥46,000</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="campaign__panel swiper-slide">
-            <div class="panel">
-              <picture class="panel__image">
-                <source srcset="./assets/images/common/campaign2.webp" type="image/webp">
-                <img src="./assets/images/common/campaign2.jpg" alt="浜辺から見える島や船の景色">
-              </picture>
-              <div class="panel__body">
-                <span class="panel__category category-tag">体験ダイビング</span>
-                <h3 class="panel__title">貸切体験ダイビング</h3>
-                <div class="panel__box">
-                  <p class="panel__sub-title">全部コミコミ(お一人様)</p>
-                  <div class="panel__price-box">
-                    <p class="panel__price">¥24,000</p>
-                    <p class="panel__discount">¥18,000</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="campaign__panel swiper-slide">
-            <div class="panel">
-              <picture class="panel__image">
-                <source srcset="./assets/images/common/campaign3.webp" type="image/webp">
-                <img src="./assets/images/common/campaign3.jpg" alt="暗い水中で無数の小さなクラゲがライトアップされている様子">
-              </picture>
-              <div class="panel__body">
-                <span class="panel__category category-tag">体験ダイビング</span>
-                <h3 class="panel__title">ナイトダイビング</h3>
-                <div class="panel__box">
-                  <p class="panel__sub-title">全部コミコミ(お一人様)</p>
-                  <div class="panel__price-box">
-                    <p class="panel__price">¥10,000</p>
-                    <p class="panel__discount">¥8,000</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="campaign__panel panel swiper-slide">
-            <picture class="panel__image">
-              <source srcset="./assets/images/common/campaign4.webp" type="image/webp">
-              <img src="./assets/images/common/campaign4.jpg" alt="海面から4人のダイバーが顔を出している様子">
-            </picture>
-            <div class="panel__body">
-              <span class="panel__category category-tag">ファンダイビング</span>
-              <h3 class="panel__title">貸切ファンダイビング</h3>
-              <div class="panel__box">
-                <p class="panel__sub-title">全部コミコミ(お一人様)</p>
-                <div class="panel__price-box">
-                  <p class="panel__price">¥20,000</p>
-                  <p class="panel__discount">¥16,000</p>
+                  <?php
+                      $campaignPrice = get_field('campaign_price');
+                      ?>
+                  <p class="panel__price">
+                    <?php echo "¥" . number_format($campaignPrice['regular_price'], 0, '', ','); ?>
+                  </p>
+                  <p class="panel__discount">
+                    <?php echo "¥" . number_format($campaignPrice['discount_price'], 0, '', ','); ?>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <?php endwhile; ?>
       </div>
-
+      <?php wp_reset_postdata(); ?>
+      <?php endif; ?>
     </div>
     <div class="campaign__button">
       <a href="<?php echo $campaign; ?>" class="button"><span>View more</span></a>
