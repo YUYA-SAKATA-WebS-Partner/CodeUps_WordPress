@@ -33,47 +33,45 @@ $sitemap = esc_url(home_url('/sitemap'));
       <?php
       $args = [
         'post_type' => 'campaign',
-        'post_per_page' => 8
+        'posts_per_page' => 8
       ];
       $the_query = new WP_Query($args);
       ?>
       <?php if ($the_query->have_posts()) : ?>
       <div class="swiper-wrapper">
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-        <div class="campaign__panel swiper-slide">
-          <div class="panel">
-            <?php if (has_post_thumbnail()) : ?>
-            <picture class="panel__image">
-              <?php the_post_thumbnail(); ?>
-            </picture>
-            <?php else : ?>
-            <picture class="panel__image">
-              <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>">
-            </picture>
-            <?php endif; ?>
-            <div class="panel__body">
-              <span class="panel__category category-tag">
+        <div class="campaign__panel panel swiper-slide">
+          <?php if (has_post_thumbnail()) : ?>
+          <picture class="panel__image">
+            <?php the_post_thumbnail(); ?>
+          </picture>
+          <?php else : ?>
+          <picture class="panel__image">
+            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>">
+          </picture>
+          <?php endif; ?>
+          <div class="panel__body">
+            <span class="panel__category category-tag">
+              <?php
+                  $terms = get_the_terms($post->ID, 'campaign_category');
+                  foreach ($terms as $term) {
+                    echo $term->name;
+                  };
+                  ?>
+            </span>
+            <h3 class="panel__title"><?php the_title(); ?></h3>
+            <div class="panel__box">
+              <p class="panel__sub-title">全部コミコミ(お一人様)</p>
+              <div class="panel__price-box">
                 <?php
-                    $terms = get_the_terms($post->ID, 'campaign_category');
-                    foreach ($terms as $term) {
-                      echo $term->name;
-                    }
+                    $campaignPrice = get_field('campaign_price');
                     ?>
-              </span>
-              <h3 class="panel__title"><?php the_title(); ?></h3>
-              <div class="panel__box">
-                <p class="panel__sub-title">全部コミコミ(お一人様)</p>
-                <div class="panel__price-box">
-                  <?php
-                      $campaignPrice = get_field('campaign_price');
-                      ?>
-                  <p class="panel__price">
-                    <?php echo "¥" . number_format($campaignPrice['regular_price'], 0, '', ','); ?>
-                  </p>
-                  <p class="panel__discount">
-                    <?php echo "¥" . number_format($campaignPrice['discount_price'], 0, '', ','); ?>
-                  </p>
-                </div>
+                <p class="panel__price">
+                  <?php echo "¥" . number_format($campaignPrice['regular_price'], 0, '', ','); ?>
+                </p>
+                <p class="panel__discount">
+                  <?php echo "¥" . number_format($campaignPrice['discount_price'], 0, '', ','); ?>
+                </p>
               </div>
             </div>
           </div>
@@ -170,7 +168,7 @@ $sitemap = esc_url(home_url('/sitemap'));
     <?php
     $args = [
       'post_type' => 'post',
-      'post_per_page' => 3
+      'posts_per_page' => 3
     ];
     $the_query = new WP_Query($args);
     ?>
@@ -211,7 +209,7 @@ $sitemap = esc_url(home_url('/sitemap'));
     <?php
     $args = [
       'post_type' => 'voice',
-      'post_per_page' => 2
+      'posts_per_page' => 2
     ];
     $the_query = new WP_Query($args);
     ?>
@@ -229,18 +227,19 @@ $sitemap = esc_url(home_url('/sitemap'));
                 <?php echo $voiceInfo['voice_age'] . "(" . $voiceInfo['voice_gender'] . ")"; ?></div>
               <span class="text-card__category category-tag">ライセンス講習</span>
             </div>
-            <h3 class="text-card__title">ここにタイトルが入ります。ここにタイトル</h3>
+            <h3 class="text-card__title"><?php the_title(); ?></h3>
           </div>
           <picture class="text-card__image colorbox js-colorbox">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/voice1.webp"
-              type="image/webp">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/voice1.jpg"
-              alt="麦わら帽子をかぶった笑顔の女性">
+            <?php if (has_post_thumbnail()) : ?>
+            <?php the_post_thumbnail(); ?>
+            <?php else : ?>
+            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>">
+            <?php endif; ?>
           </picture>
         </div>
         <div class="text-card__body">
           <p class="text-card__text text">
-            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。
+            <?php the_field('voice_text') ?>
           </p>
         </div>
       </div>
@@ -249,7 +248,7 @@ $sitemap = esc_url(home_url('/sitemap'));
     </div>
     <?php endif; ?>
     <div class="voice__button">
-      <a href="#" class="button"><span>View more</span></a>
+      <a href="<?php echo $voice; ?>" class="button"><span>View more</span></a>
     </div>
   </div>
 </section>
@@ -275,79 +274,79 @@ $sitemap = esc_url(home_url('/sitemap'));
         <div class="price__list price-list">
           <h3 class="price-list__title">ライセンス講習</h3>
           <dl class="price-list__items">
+            <?php
+            $licenses = SCF::get_option_meta('theme_options_price', 'price_license');
+            foreach ($licenses as $license) {
+              $license_course = esc_html($license['price_license_course']);
+              $license_price = esc_html($license['price_license_price']);
+              if ($license_course && $license_price) :
+            ?>
             <div class="price-list__item">
-              <dt class="price-list__item-title">オープンウォーターダイバーコース</dt>
-              <dd class="price-list__price">¥50,000</dd>
+              <dt class="price-list__item-title"><?php echo $license_course; ?></dt>
+              <dd class="price-list__price"><?php echo "¥" . number_format($license_price, 0, '', ','); ?></dd>
             </div>
-            <div class="price-list__item">
-              <dt class="price-list__item-title">アドバンスドオープンウォーターコース</dt>
-              <dd class="price-list__price">¥60,000</dd>
-            </div>
-            <div class="price-list__item">
-              <dt class="price-list__item-title">レスキュー＋EFRコース</dt>
-              <dd class="price-list__price">¥70,000</dd>
-            </div>
+            <?php endif;
+            }; ?>
           </dl>
         </div>
         <div class="price__list price-list">
           <h3 class="price-list__title">体験ダイビング</h3>
           <dl class="price-list__items">
+            <?php
+            $experiences = SCF::get_option_meta('theme_options_price', 'price_experience');
+            foreach ($experiences as $experience) {
+              $experience_course = esc_html($experience['price_experience_course']);
+              $experience_price = esc_html($experience['price_experience_price']);
+              if ($experience_course && $experience_price) :
+            ?>
             <div class="price-list__item">
-              <dt class="price-list__item-title">ビーチ体験ダイビング(半日)</dt>
-              <dd class="price-list__price">¥7,000</dd>
+              <dt class="price-list__item-title"><?php echo $experience_course; ?></dt>
+              <dd class="price-list__price"><?php echo "¥" . number_format($experience_price, 0, '', ','); ?></dd>
             </div>
-            <div class="price-list__item">
-              <dt class="price-list__item-title">ビーチ体験ダイビング(1日)</dt>
-              <dd class="price-list__price">¥14,000</dd>
-            </div>
-            <div class="price-list__item">
-              <dt class="price-list__item-title">ボート体験ダイビング(半日)</dt>
-              <dd class="price-list__price">¥10,000</dd>
-            </div>
-            <div class="price-list__item">
-              <dt class="price-list__item-title">ボート体験ダイビング(1日)</dt>
-              <dd class="price-list__price">¥18,000</dd>
-            </div>
+            <?php endif;
+            }; ?>
           </dl>
         </div>
         <div class="price__list price-list">
           <h3 class="price-list__title">ファンダイビング</h3>
           <dl class="price-list__items">
+            <?php
+            $funs = SCF::get_option_meta('theme_options_price', 'price_fun-diving');
+            foreach ($funs as $fun) {
+              $fun_course = esc_html($fun['price_fun-diving_course']);
+              $fun_price = esc_html($fun['price_fun-diving_price']);
+              if ($fun_course && $fun_price) :
+            ?>
             <div class="price-list__item">
-              <dt class="price-list__item-title">ビーチダイビング(2ダイブ)</dt>
-              <dd class="price-list__price">¥14,000</dd>
+              <dt class="price-list__item-title"><?php echo $fun_course; ?></dt>
+              <dd class="price-list__price"><?php echo "¥" . number_format($fun_price, 0, '', ','); ?></dd>
             </div>
-            <div class="price-list__item">
-              <dt class="price-list__item-title">ボートダイビング(2ダイブ)</dt>
-              <dd class="price-list__price">¥18,000</dd>
-            </div>
-            <div class="price-list__item">
-              <dt class="price-list__item-title">スペシャルダイビング(2ダイブ)</dt>
-              <dd class="price-list__price">¥24,000</dd>
-            </div>
-            <div class="price-list__item">
-              <dt class="price-list__item-title">ナイトダイビング(1ダイブ)</dt>
-              <dd class="price-list__price">¥10,000</dd>
-            </div>
+            <?php endif;
+            }; ?>
           </dl>
         </div>
         <div class="price__list price-list">
           <h3 class="price-list__title">スペシャルダイビング</h3>
           <dl class="price-list__items">
+            <?php
+            $specials = SCF::get_option_meta('theme_options_price', 'price_special');
+            foreach ($specials as $special) {
+              $special_course = esc_html($special['price_special_course']);
+              $special_price = esc_html($special['price_special_price']);
+              if ($special_course && $special_price) :
+            ?>
             <div class="price-list__item">
-              <dt class="price-list__item-title">貸切ダイビング(2ダイブ)</dt>
-              <dd class="price-list__price">¥24,000</dd>
+              <dt class="price-list__item-title"><?php echo $special_course; ?></dt>
+              <dd class="price-list__price"><?php echo "¥" . number_format($special_price, 0, '', ','); ?></dd>
             </div>
-            <div class="price-list__item">
-              <dt class="price-list__item-title">1日ダイビング(3ダイブ)</dt>
-              <dd class="price-list__price">¥32,000</dd>
-            </div>
+            <?php endif;
+            }; ?>
           </dl>
         </div>
       </div>
     </div>
     <div class="price__button">
-      <a href="#" class="price__link button"><span>View more</span></a>
+      <a href="<?php echo $price; ?>" class="price__link button"><span>View more</span></a>
     </div>
   </div>
 </section>
