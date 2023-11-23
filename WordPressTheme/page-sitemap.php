@@ -44,7 +44,8 @@
         </ul>
         <ul class="footer-nav__items">
           <li class="footer-nav__item footer-nav__item--black"><a href="<?php echo $faq; ?>">よくある質問</a></li>
-          <li class="footer-nav__item footer-nav__item--black"><a href="<?php echo $policy; ?>">プライバシー<br class="u-mobile">ポリシー</a></li>
+          <li class="footer-nav__item footer-nav__item--black"><a href="<?php echo $policy; ?>">プライバシー<br
+                class="u-mobile">ポリシー</a></li>
           <li class="footer-nav__item footer-nav__item--black"><a href="<?php echo $terms; ?>">利用規約</a></li>
           <li class="footer-nav__item footer-nav__item--black"><a href="<?php echo $contact; ?>">お問い合わせ</a></li>
           <li class="footer-nav__item footer-nav__item--black"><a href="<?php echo $sitemap; ?>">サイトマップ</a></li>

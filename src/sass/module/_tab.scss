@@ -23,12 +23,12 @@
 
 .tab__box {
   width: 100%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: myrem(21);
   @include mq(md) {
     justify-content: start;
+    grid-template-columns: repeat(4, 1fr);
     gap: myrem(32);
   }
 }
@@ -42,7 +42,7 @@
   cursor: pointer;
 }
 
-.tab__item>span {
+.tab__item>a {
   display: inline-block;
   width: 100%;
   text-align: center;
@@ -57,16 +57,16 @@
   transition: color .3s, background-color .3s;
 }
 
-.tab__item--large>span {
+.tab__item--large>a {
   text-transform: uppercase;
 }
 
-.tab__item.is-active>span {
+.tab__item.is-active>a {
   background-color: $green;
   color: $white;
 }
 
-.tab__item:hover>span {
+.tab__item:hover>a {
   background-color: $green;
   color: $white;
 }

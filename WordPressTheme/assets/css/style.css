@@ -2688,10 +2688,10 @@ body.fixed {
 }
 
 .tab__box {
-	align-items: center;
-	display: inline-flex;
+	grid-gap: 1.3125rem;
+	display: grid;
 	gap: 1.3125rem;
-	justify-content: space-between;
+	grid-template-columns: repeat(2, 1fr);
 	width: 100%;
 }
 
@@ -2704,7 +2704,7 @@ body.fixed {
 	width: 10.125rem;
 }
 
-.tab__item > span {
+.tab__item > a {
 	background-color: #fff;
 	border: 0.0625rem solid #408F95;
 	color: #408F95;
@@ -2719,16 +2719,16 @@ body.fixed {
 	width: 100%;
 }
 
-.tab__item--large > span {
+.tab__item--large > a {
 	text-transform: uppercase;
 }
 
-.tab__item.is-active > span {
+.tab__item.is-active > a {
 	background-color: #408F95;
 	color: #fff;
 }
 
-.tab__item:hover > span {
+.tab__item:hover > a {
 	background-color: #408F95;
 	color: #fff;
 }
@@ -2985,10 +2985,40 @@ body.fixed {
 
 .previouspostslink {
 	margin-right: 1.75rem;
+	position: relative;
+}
+
+.previouspostslink::before {
+	border-left: 0.0625rem solid #408F95;
+	border-top: 0.0625rem solid #408F95;
+	bottom: 0;
+	content: "";
+	height: 0.625rem;
+	left: 45%;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	transform: rotate(-45deg);
+	width: 0.625rem;
 }
 
 .nextpostslink {
 	margin-left: 1.75rem;
+	position: relative;
+}
+
+.nextpostslink::before {
+	border-right: 0.0625rem solid #408F95;
+	border-top: 0.0625rem solid #408F95;
+	bottom: 0;
+	content: "";
+	height: 0.625rem;
+	margin: auto;
+	position: absolute;
+	right: 45%;
+	top: 0;
+	transform: rotate(45deg);
+	width: 0.625rem;
 }
 
 .wp-pagenavi.wp-pagenavi--arrow {
@@ -4047,6 +4077,7 @@ html {
 
 .tab__box {
 	gap: 2rem;
+	grid-template-columns: repeat(4, 1fr);
 	justify-content: start;
 }
 

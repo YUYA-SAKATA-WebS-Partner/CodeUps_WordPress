@@ -44,7 +44,7 @@ $sitemap = esc_url(home_url('/sitemap'));
           </div>
           <p class="contact-banner__text">ご予約・お問い合わせはコチラ</p>
           <div class="contact-banner__button">
-            <a href="#" class="button"><span>Contact us</span></a>
+            <a href="<?php echo $contact; ?>" class="button"><span>Contact us</span></a>
           </div>
         </div>
       </div>

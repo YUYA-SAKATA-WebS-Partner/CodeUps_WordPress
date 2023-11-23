@@ -39,6 +39,7 @@ function enqueue_custom_assets()
 
 add_action('wp_enqueue_scripts', 'enqueue_custom_assets');
 
+
 /****************************
 管理画面の「投稿」を「ブログ」に変更
  ****************************/
@@ -86,3 +87,18 @@ add_filter('excerpt_length', 'custom_excerpt_length', 999);
 SCF::add_options_page('ギャラリー', 'ギャラリー', 'manage_options', 'theme_options_gallery', 'dashicons-format-gallery', '9');
 SCF::add_options_page('料金表', '料金表', 'manage_options', 'theme_options_price', 'dashicons-money-alt', '9');
 SCF::add_options_page('よくある質問', 'よくある質問', 'manage_options', 'theme_options_faq', 'dashicons-microphone', '9');
+
+/****************************
+カスタム投稿タイプ(キャンペーン)：アーカイブページの表示件数変更
+ ****************************/
+function change_set_campaign($query)
+{
+  if (is_admin() || !$query->is_main_query()) {
+    return;
+  }
+  if ($query->is_post_type_archive('campaign')) {
+    $query->set('posts_per_page', '4');
+    return;
+  }
+}
+add_action('pre_get_posts', 'change_set_campaign');

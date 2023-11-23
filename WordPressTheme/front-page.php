@@ -38,47 +38,47 @@ $sitemap = esc_url(home_url('/sitemap'));
       $the_query = new WP_Query($args);
       ?>
       <?php if ($the_query->have_posts()) : ?>
-      <div class="swiper-wrapper">
-        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-        <div class="campaign__panel panel swiper-slide">
-          <?php if (has_post_thumbnail()) : ?>
-          <picture class="panel__image">
-            <?php the_post_thumbnail(); ?>
-          </picture>
-          <?php else : ?>
-          <picture class="panel__image">
-            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>">
-          </picture>
-          <?php endif; ?>
-          <div class="panel__body">
-            <span class="panel__category category-tag">
-              <?php
+        <div class="swiper-wrapper">
+          <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+            <div class="campaign__panel panel swiper-slide">
+              <?php if (has_post_thumbnail()) : ?>
+                <picture class="panel__image">
+                  <?php the_post_thumbnail(); ?>
+                </picture>
+              <?php else : ?>
+                <picture class="panel__image">
+                  <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>">
+                </picture>
+              <?php endif; ?>
+              <div class="panel__body">
+                <span class="panel__category category-tag">
+                  <?php
                   $terms = get_the_terms($post->ID, 'campaign_category');
                   foreach ($terms as $term) {
                     echo $term->name;
                   };
                   ?>
-            </span>
-            <h3 class="panel__title"><?php the_title(); ?></h3>
-            <div class="panel__box">
-              <p class="panel__sub-title">全部コミコミ(お一人様)</p>
-              <div class="panel__price-box">
-                <?php
+                </span>
+                <h3 class="panel__title"><?php the_title(); ?></h3>
+                <div class="panel__box">
+                  <p class="panel__sub-title">全部コミコミ(お一人様)</p>
+                  <div class="panel__price-box">
+                    <?php
                     $campaignPrice = get_field('campaign_price');
                     ?>
-                <p class="panel__price">
-                  <?php echo "¥" . number_format($campaignPrice['regular_price'], 0, '', ','); ?>
-                </p>
-                <p class="panel__discount">
-                  <?php echo "¥" . number_format($campaignPrice['discount_price'], 0, '', ','); ?>
-                </p>
+                    <p class="panel__price">
+                      <?php echo "¥" . number_format($campaignPrice['regular_price'], 0, '', ','); ?>
+                    </p>
+                    <p class="panel__discount">
+                      <?php echo "¥" . number_format($campaignPrice['discount_price'], 0, '', ','); ?>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          <?php endwhile; ?>
         </div>
-        <?php endwhile; ?>
-      </div>
-      <?php wp_reset_postdata(); ?>
+        <?php wp_reset_postdata(); ?>
       <?php endif; ?>
     </div>
     <div class="campaign__button">
@@ -97,24 +97,16 @@ $sitemap = esc_url(home_url('/sitemap'));
     <div class="about__container">
       <div class="about__images">
         <picture class="about__thin-image">
-          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about2.webp"
-            media="(min-width: 768px)" type="image/webp">
-          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about2.jpg"
-            media="(min-width: 768px)">
-          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about2-sp.webp"
-            type="image/webp">
-          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about2-sp.jpg"
-            alt="瓦葺きの屋根に乗っているシーサーと青い空">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about2.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about2.jpg" media="(min-width: 768px)">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about2-sp.webp" type="image/webp">
+          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about2-sp.jpg" alt="瓦葺きの屋根に乗っているシーサーと青い空">
         </picture>
         <picture class="about__wide-image">
-          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about.webp"
-            media="(min-width: 768px)" type="image/webp">
-          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about.jpg"
-            media="(min-width: 768px)">
-          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about-sp.webp"
-            type="image/webp">
-          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about-sp.jpg"
-            alt="海中で２匹の黄色い魚が向かい合っている様子">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about.jpg" media="(min-width: 768px)">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about-sp.webp" type="image/webp">
+          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/about-sp.jpg" alt="海中で２匹の黄色い魚が向かい合っている様子">
         </picture>
       </div>
       <div class="about__body">
@@ -141,10 +133,8 @@ $sitemap = esc_url(home_url('/sitemap'));
     </div>
     <div class="information__body">
       <picture class="information__image colorbox js-colorbox">
-        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/information.webp"
-          type="image/webp">
-        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/information.jpg"
-          alt="珊瑚の群生の近くで多様な魚たちが泳いでいる様子">
+        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/information.webp" type="image/webp">
+        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/information.jpg" alt="珊瑚の群生の近くで多様な魚たちが泳いでいる様子">
       </picture>
       <div class="information__box">
         <h3 class="information__heading">ライセンス講習</h3>
@@ -173,25 +163,25 @@ $sitemap = esc_url(home_url('/sitemap'));
     $the_query = new WP_Query($args);
     ?>
     <?php if ($the_query->have_posts()) : ?>
-    <div class="blog__cards cards">
-      <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-      <a href="<?php the_permalink(); ?>" class="cards__item card">
-        <picture class="card__image">
-          <?php if (has_post_thumbnail()) : ?>
-          <?php the_post_thumbnail(); ?>
-          <?php else : ?>
-          <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>">
-          <?php endif; ?>
-        </picture>
-        <div class="card__body">
-          <time class="card__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-          <h3 class="card__title"><?php the_title(); ?></h3>
-          <p class="card__text text"><?php echo get_the_excerpt(); ?></p>
-        </div>
-      </a>
-      <?php endwhile; ?>
-    </div>
-    <?php wp_reset_postdata(); ?>
+      <div class="blog__cards cards">
+        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+          <a href="<?php the_permalink(); ?>" class="cards__item card">
+            <picture class="card__image">
+              <?php if (has_post_thumbnail()) : ?>
+                <?php the_post_thumbnail(); ?>
+              <?php else : ?>
+                <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>">
+              <?php endif; ?>
+            </picture>
+            <div class="card__body">
+              <time class="card__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+              <h3 class="card__title"><?php the_title(); ?></h3>
+              <p class="card__text text"><?php echo get_the_excerpt(); ?></p>
+            </div>
+          </a>
+        <?php endwhile; ?>
+      </div>
+      <?php wp_reset_postdata(); ?>
     <?php endif; ?>
     <div class="blog__button">
       <a href="<?php echo $blog; ?>" class="button"><span>View more</span></a>
@@ -214,38 +204,38 @@ $sitemap = esc_url(home_url('/sitemap'));
     $the_query = new WP_Query($args);
     ?>
     <?php if ($the_query->have_posts()) : ?>
-    <div class="voice__cards text-cards">
-      <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-      <div class="text-cards__item text-card">
-        <div class="text-card__header">
-          <div class="text-card__box">
-            <div class="text-card__meta">
-              <?php
+      <div class="voice__cards text-cards">
+        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+          <div class="text-cards__item text-card">
+            <div class="text-card__header">
+              <div class="text-card__box">
+                <div class="text-card__meta">
+                  <?php
                   $voiceInfo = get_field('voice_info');
                   ?>
-              <div class="text-card__age">
-                <?php echo $voiceInfo['voice_age'] . "(" . $voiceInfo['voice_gender'] . ")"; ?></div>
-              <span class="text-card__category category-tag">ライセンス講習</span>
+                  <div class="text-card__age">
+                    <?php echo $voiceInfo['voice_age'] . "(" . $voiceInfo['voice_gender'] . ")"; ?></div>
+                  <span class="text-card__category category-tag">ライセンス講習</span>
+                </div>
+                <h3 class="text-card__title"><?php the_title(); ?></h3>
+              </div>
+              <picture class="text-card__image colorbox js-colorbox">
+                <?php if (has_post_thumbnail()) : ?>
+                  <?php the_post_thumbnail(); ?>
+                <?php else : ?>
+                  <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>">
+                <?php endif; ?>
+              </picture>
             </div>
-            <h3 class="text-card__title"><?php the_title(); ?></h3>
+            <div class="text-card__body">
+              <p class="text-card__text text">
+                <?php the_field('voice_text') ?>
+              </p>
+            </div>
           </div>
-          <picture class="text-card__image colorbox js-colorbox">
-            <?php if (has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail(); ?>
-            <?php else : ?>
-            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>">
-            <?php endif; ?>
-          </picture>
-        </div>
-        <div class="text-card__body">
-          <p class="text-card__text text">
-            <?php the_field('voice_text') ?>
-          </p>
-        </div>
+        <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
       </div>
-      <?php endwhile; ?>
-      <?php wp_reset_postdata(); ?>
-    </div>
     <?php endif; ?>
     <div class="voice__button">
       <a href="<?php echo $voice; ?>" class="button"><span>View more</span></a>
@@ -262,12 +252,9 @@ $sitemap = esc_url(home_url('/sitemap'));
     </div>
     <div class="price__body">
       <picture class="price__image colorbox js-colorbox">
-        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price.webp"
-          media="(min-width:768px)" type="image/webp">
-        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price.jpg"
-          media="(min-width:768px)">
-        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price-sp.webp"
-          type="image/webp">
+        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price.webp" media="(min-width:768px)" type="image/webp">
+        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price.jpg" media="(min-width:768px)">
+        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price-sp.webp" type="image/webp">
         <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/price-sp.jpg" alt="海中をウミガメが泳いでいる様子">
       </picture>
       <div class="price__box">
@@ -281,10 +268,10 @@ $sitemap = esc_url(home_url('/sitemap'));
               $license_price = esc_html($license['price_license_price']);
               if ($license_course && $license_price) :
             ?>
-            <div class="price-list__item">
-              <dt class="price-list__item-title"><?php echo $license_course; ?></dt>
-              <dd class="price-list__price"><?php echo "¥" . number_format($license_price, 0, '', ','); ?></dd>
-            </div>
+                <div class="price-list__item">
+                  <dt class="price-list__item-title"><?php echo $license_course; ?></dt>
+                  <dd class="price-list__price"><?php echo "¥" . number_format($license_price, 0, '', ','); ?></dd>
+                </div>
             <?php endif;
             }; ?>
           </dl>
@@ -299,10 +286,10 @@ $sitemap = esc_url(home_url('/sitemap'));
               $experience_price = esc_html($experience['price_experience_price']);
               if ($experience_course && $experience_price) :
             ?>
-            <div class="price-list__item">
-              <dt class="price-list__item-title"><?php echo $experience_course; ?></dt>
-              <dd class="price-list__price"><?php echo "¥" . number_format($experience_price, 0, '', ','); ?></dd>
-            </div>
+                <div class="price-list__item">
+                  <dt class="price-list__item-title"><?php echo $experience_course; ?></dt>
+                  <dd class="price-list__price"><?php echo "¥" . number_format($experience_price, 0, '', ','); ?></dd>
+                </div>
             <?php endif;
             }; ?>
           </dl>
@@ -317,10 +304,10 @@ $sitemap = esc_url(home_url('/sitemap'));
               $fun_price = esc_html($fun['price_fun-diving_price']);
               if ($fun_course && $fun_price) :
             ?>
-            <div class="price-list__item">
-              <dt class="price-list__item-title"><?php echo $fun_course; ?></dt>
-              <dd class="price-list__price"><?php echo "¥" . number_format($fun_price, 0, '', ','); ?></dd>
-            </div>
+                <div class="price-list__item">
+                  <dt class="price-list__item-title"><?php echo $fun_course; ?></dt>
+                  <dd class="price-list__price"><?php echo "¥" . number_format($fun_price, 0, '', ','); ?></dd>
+                </div>
             <?php endif;
             }; ?>
           </dl>
@@ -335,10 +322,10 @@ $sitemap = esc_url(home_url('/sitemap'));
               $special_price = esc_html($special['price_special_price']);
               if ($special_course && $special_price) :
             ?>
-            <div class="price-list__item">
-              <dt class="price-list__item-title"><?php echo $special_course; ?></dt>
-              <dd class="price-list__price"><?php echo "¥" . number_format($special_price, 0, '', ','); ?></dd>
-            </div>
+                <div class="price-list__item">
+                  <dt class="price-list__item-title"><?php echo $special_course; ?></dt>
+                  <dd class="price-list__price"><?php echo "¥" . number_format($special_price, 0, '', ','); ?></dd>
+                </div>
             <?php endif;
             }; ?>
           </dl>

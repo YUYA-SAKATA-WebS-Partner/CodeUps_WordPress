@@ -34,11 +34,41 @@
 }
 
 .previouspostslink {
+  position: relative;
   margin-right: myrem(28);
 }
 
+.previouspostslink::before {
+  border-left: myrem(1) solid $green;
+  border-top: myrem(1) solid $green;
+  bottom: 0;
+  content: "";
+  height: myrem(10);
+  margin: auto;
+  position: absolute;
+  left: 45%;
+  top: 0;
+  transform: rotate(-45deg);
+  width: myrem(10);
+}
+
 .nextpostslink {
+  position: relative;
   margin-left: myrem(28);
+}
+
+.nextpostslink::before {
+  border-right: myrem(1) solid $green;
+  border-top: myrem(1) solid $green;
+  bottom: 0;
+  content: "";
+  height: myrem(10);
+  margin: auto;
+  position: absolute;
+  right: 45%;
+  top: 0;
+  transform: rotate(45deg);
+  width: myrem(10);
 }
 
 .wp-pagenavi.wp-pagenavi--arrow {
