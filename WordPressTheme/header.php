@@ -195,7 +195,18 @@ $sitemap = esc_url(home_url('/sitemap'));
         <p class="mainview__subtitle">into the ocean</p>
       </div>
     </div>
-    <?php elseif (is_archive('archive-campaign', 'taxonomy-campaign_category')) : ?>
+    <?php elseif (is_post_type_archive('voice')) : ?>
+    <div class="sub-mainview">
+      <picture class="sub-mainview__image">
+        <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-voice_mv_pc.jpg"
+          media="(min-width: 768px)">
+        <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-voice_mv_sp.jpg" alt="">
+      </picture>
+      <div class="sub-mainview__box">
+        <h1 class="sub-mainview__title">Voice</h1>
+      </div>
+    </div>
+    <?php elseif (is_post_type_archive('campaign') || is_tax('campaign_category')) : ?>
     <div class="sub-mainview">
       <picture class="sub-mainview__image">
         <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-campaign_mv_pc.webp"
@@ -228,11 +239,10 @@ $sitemap = esc_url(home_url('/sitemap'));
     </div>
     <?php endif; ?>
     <!-- breadcrumbs -->
-    <?php if(!is_front_page()): ?>
+    <?php if (!is_front_page()) : ?>
     <div class="breadcrumbs inner" typeof="BreadcrumbList" vocab="https://schema.org/">
-      <?php if(function_exists('bcn_display'))
-    {
-        bcn_display();
-    }?>
+      <?php if (function_exists('bcn_display')) {
+          bcn_display();
+        } ?>
     </div>
     <?php endif; ?>

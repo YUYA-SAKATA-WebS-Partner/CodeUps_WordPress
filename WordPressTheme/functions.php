@@ -99,6 +99,9 @@ function change_set_campaign($query)
   if ($query->is_post_type_archive('campaign')) {
     $query->set('posts_per_page', '4');
     return;
+  } elseif ($query->is_post_type_archive('voice')) {
+    $query->set('posts_per_page', '6');
+    return;
   }
 }
 add_action('pre_get_posts', 'change_set_campaign');

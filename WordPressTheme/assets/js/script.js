@@ -161,14 +161,6 @@ jQuery(function ($) {
     ;
   });
 
-  var currentUrl = window.location.href;
-$(".js-tab-item").children('a').each(function () {
-  var linkUrl = $(this).attr("href");
-  if (currentUrl === linkUrl) {
-    $(this).parent('li').addClass('is-active');
-  }
-});
-
   // =============================
   // FAQアコーディオン
   // =============================
