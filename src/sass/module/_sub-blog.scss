@@ -24,6 +24,13 @@
   }
 }
 
+.sub-blog__date {
+  font-size: myrem(24);
+  font-weight: $regular;
+  letter-spacing: 0.05em;
+  color: $black;
+}
+
 .sub-blog__body {
   @include mq(md) {
     display: flex;
@@ -31,3 +38,6 @@
   }
 }
 
+.sub-blog__body--archive {
+  margin-top: myrem(20);
+}

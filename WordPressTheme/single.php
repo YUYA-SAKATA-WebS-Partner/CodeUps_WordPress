@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+<?php
+// 記事のビュー数を更新(ログイン中・クローラーは除外)
+if (!is_user_logged_in() && !is_robots()) {
+  setPostViews(get_the_ID());
+}
+?>
 <!-- content -->
 <div class="page-article single-layout">
   <div class="page-article__inner inner">

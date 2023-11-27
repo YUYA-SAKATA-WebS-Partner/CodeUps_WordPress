@@ -2625,6 +2625,17 @@ body.fixed {
 	z-index: 10;
 }
 
+.sub-blog__date {
+	color: #0D2936;
+	font-size: 1.5rem;
+	font-weight: 400;
+	letter-spacing: 0.05em;
+}
+
+.sub-blog__body--archive {
+	margin-top: 1.25rem;
+}
+
 .sub-mainview {
 	height: 28.75rem;
 	position: relative;
