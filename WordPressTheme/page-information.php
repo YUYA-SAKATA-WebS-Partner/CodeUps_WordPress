@@ -1,6 +1,4 @@
 <?php get_header(); ?>
-<!-- breadcrumbs -->
-<div class="breadcrumbs inner">TOP > ダイビング情報</div>
 
 <!-- page-information -->
 <div class="page-information sub-page-information-layout">
