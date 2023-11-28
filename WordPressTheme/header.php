@@ -144,146 +144,129 @@ $sitemap = esc_url(home_url('/sitemap'));
   </header>
   <main>
     <?php if (is_front_page()) : ?>
-    <!-- mainview -->
-    <div class="mainview">
-      <div class="mainview__slide swiper js-top-swiper">
-        <div class="swiper-wrapper">
-          <picture class="mainview__image swiper-slide">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview1.webp"
-              media="(min-width: 768px)" type="image/webp">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview1.jpg"
-              media="(min-width: 768px)">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview1-sp.webp"
-              type="image/webp">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview1-sp.jpg"
-              alt="茶色いウミガメが透き通ったエメラルドグリーンの海中で泳いでいる様子">
-          </picture>
-          <picture class="mainview__image swiper-slide">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview2.webp"
-              media="(min-width: 768px)" type="image/webp">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview2.jpg"
-              media="(min-width: 768px)">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview2-sp.webp"
-              type="image/webp">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview2-sp.jpg"
-              alt="日が差し込む海中で２人のダイバーとウミガメが向かい合って泳いでいる様子">
-          </picture>
-          <picture class="mainview__image swiper-slide">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview3.webp"
-              media="(min-width: 768px)" type="image/webp">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview3.jpg"
-              media="(min-width: 768px)">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview3-sp.webp"
-              type="image/webp">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview3-sp.jpg"
-              alt="晴れた空と島をバックに3台のフェリーが海上を進んでいる様子">
-          </picture>
-          <picture class="mainview__image swiper-slide">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview4.webp"
-              media="(min-width: 768px)" type="image/webp">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview4.jpg"
-              media="(min-width: 768px)">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview4-sp.webp"
-              type="image/webp">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview4-sp.jpg"
-              alt="大きな雲が浮かぶ青空とエメラルドグリーンの海を見渡せる広大な砂浜">
-          </picture>
+      <!-- mainview -->
+      <div class="mainview">
+        <div class="mainview__slide swiper js-top-swiper">
+          <div class="swiper-wrapper">
+            <picture class="mainview__image swiper-slide">
+              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview1.webp" media="(min-width: 768px)" type="image/webp">
+              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview1.jpg" media="(min-width: 768px)">
+              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview1-sp.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview1-sp.jpg" alt="茶色いウミガメが透き通ったエメラルドグリーンの海中で泳いでいる様子">
+            </picture>
+            <picture class="mainview__image swiper-slide">
+              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview2.webp" media="(min-width: 768px)" type="image/webp">
+              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview2.jpg" media="(min-width: 768px)">
+              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview2-sp.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview2-sp.jpg" alt="日が差し込む海中で２人のダイバーとウミガメが向かい合って泳いでいる様子">
+            </picture>
+            <picture class="mainview__image swiper-slide">
+              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview3.webp" media="(min-width: 768px)" type="image/webp">
+              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview3.jpg" media="(min-width: 768px)">
+              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview3-sp.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview3-sp.jpg" alt="晴れた空と島をバックに3台のフェリーが海上を進んでいる様子">
+            </picture>
+            <picture class="mainview__image swiper-slide">
+              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview4.webp" media="(min-width: 768px)" type="image/webp">
+              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview4.jpg" media="(min-width: 768px)">
+              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview4-sp.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview4-sp.jpg" alt="大きな雲が浮かぶ青空とエメラルドグリーンの海を見渡せる広大な砂浜">
+            </picture>
+          </div>
+        </div>
+        <div class="mainview__box">
+          <p class="mainview__title">diving</p>
+          <p class="mainview__subtitle">into the ocean</p>
         </div>
       </div>
-      <div class="mainview__box">
-        <p class="mainview__title">diving</p>
-        <p class="mainview__subtitle">into the ocean</p>
-      </div>
-    </div>
     <?php elseif (is_post_type_archive('voice') || is_tax('voice_category')) : ?>
-    <div class="sub-mainview">
-      <picture class="sub-mainview__image">
-        <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-voice_mv_pc.jpg"
-          media="(min-width: 768px)">
-        <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-voice_mv_sp.jpg" alt="">
-      </picture>
-      <div class="sub-mainview__box">
-        <h1 class="sub-mainview__title">Voice</h1>
+      <div class="sub-mainview">
+        <picture class="sub-mainview__image">
+          <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-voice_mv_pc.jpg" media="(min-width: 768px)">
+          <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-voice_mv_sp.jpg" alt="">
+        </picture>
+        <div class="sub-mainview__box">
+          <h1 class="sub-mainview__title">Voice</h1>
+        </div>
       </div>
-    </div>
     <?php elseif (is_post_type_archive('campaign') || is_tax('campaign_category')) : ?>
-    <div class="sub-mainview">
-      <picture class="sub-mainview__image">
-        <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-campaign_mv_pc.webp"
-          media="(min-width: 768px)">
-        <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-campaign_mv_sp.webp" alt="">
-      </picture>
-      <div class="sub-mainview__box">
-        <h1 class="sub-mainview__title">Campaign</h1>
+      <div class="sub-mainview">
+        <picture class="sub-mainview__image">
+          <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-campaign_mv_pc.webp" media="(min-width: 768px)">
+          <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-campaign_mv_sp.webp" alt="">
+        </picture>
+        <div class="sub-mainview__box">
+          <h1 class="sub-mainview__title">Campaign</h1>
+        </div>
       </div>
-    </div>
     <?php elseif (is_home() || is_single() || is_date()) : ?>
-    <div class="sub-mainview">
-      <picture class="sub-mainview__image">
-        <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/home_mv_pc.webp"
-          media="(min-width: 768px)">
-        <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/home_mv_sp.webp" alt="">
-      </picture>
-      <div class="sub-mainview__box">
-        <h1 class="sub-mainview__title">Blog</h1>
+      <div class="sub-mainview">
+        <picture class="sub-mainview__image">
+          <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/home_mv_pc.webp" media="(min-width: 768px)">
+          <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/home_mv_sp.webp" alt="">
+        </picture>
+        <div class="sub-mainview__box">
+          <h1 class="sub-mainview__title">Blog</h1>
+        </div>
       </div>
-    </div>
     <?php elseif (is_page('about-us')) : ?>
-    <div class="sub-mainview">
-      <picture class="sub-mainview__image">
-        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-about_mv_pc.webp"
-          media="(min-width: 768px)" type="image/webp">
-        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-about_mv_pc.jpg"
-          media="(min-width: 768px)">
-        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-about_mv_sp.webp"
-          type="image/webp">
-        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-about_mv_sp.jpg" alt="シーサーと青空">
-      </picture>
-      <div class="sub-mainview__box">
-        <h1 class="sub-mainview__title">About us</h1>
+      <div class="sub-mainview">
+        <picture class="sub-mainview__image">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-about_mv_pc.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-about_mv_pc.jpg" media="(min-width: 768px)">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-about_mv_sp.webp" type="image/webp">
+          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-about_mv_sp.jpg" alt="シーサーと青空">
+        </picture>
+        <div class="sub-mainview__box">
+          <h1 class="sub-mainview__title">About us</h1>
+        </div>
       </div>
-    </div>
     <?php elseif (is_page('information')) : ?>
-    <div class="sub-mainview">
-      <picture class="sub-mainview__image">
-        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-diving_mv_pc.webp"
-          media="(min-width: 768px)" type="image/webp">
-        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-diving_mv_pc.jpg"
-          media="(min-width: 768px)">
-        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-diving_mv_sp.webp"
-          type="image/webp">
-        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-diving_mv_sp.jpg" alt="">
-      </picture>
-      <div class="sub-mainview__box">
-        <h1 class="sub-mainview__title">Information</h1>
+      <div class="sub-mainview">
+        <picture class="sub-mainview__image">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-diving_mv_pc.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-diving_mv_pc.jpg" media="(min-width: 768px)">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-diving_mv_sp.webp" type="image/webp">
+          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-diving_mv_sp.jpg" alt="">
+        </picture>
+        <div class="sub-mainview__box">
+          <h1 class="sub-mainview__title">Information</h1>
+        </div>
       </div>
-    </div>
+    <?php elseif (is_page('price')) : ?>
+      <div class="sub-mainview">
+        <picture class="sub-mainview__image">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-price_mv_pc.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-price_mv_pc.jpg" media="(min-width: 768px)">
+          <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-price_mv_sp.webp" type="image/webp">
+          <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-price_mv_sp.jpg" alt="">
+        </picture>
+        <div class="sub-mainview__box">
+          <h1 class="sub-mainview__title">Price</h1>
+        </div>
+      </div>
     <?php elseif (!(is_front_page() || is_404())) : ?>
-    <div class="sub-mainview">
-      <picture class="sub-mainview__image">
-        <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-about_mv_pc.webp"
-          media="(min-width:768px)" type="image/webp">
-        <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-about_mv_pc.jpg"
-          media="(min-width:768px)">
-        <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-about_mv_sp.webp"
-          type="image/webp">
-        <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-about_mv_sp.jpg"
-          alt="シーサーと青空">
-      </picture>
-      <?php if (have_posts()) : ?>
-      <?php while (have_posts()) : the_post(); ?>
-      <div class="sub-mainview__box">
-        <h1 class="sub-mainview__title"><?php the_title(); ?></h1>
+      <div class="sub-mainview">
+        <picture class="sub-mainview__image">
+          <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-about_mv_pc.webp" media="(min-width:768px)" type="image/webp">
+          <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-about_mv_pc.jpg" media="(min-width:768px)">
+          <source srcset="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-about_mv_sp.webp" type="image/webp">
+          <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/page-about_mv_sp.jpg" alt="シーサーと青空">
+        </picture>
+        <?php if (have_posts()) : ?>
+          <?php while (have_posts()) : the_post(); ?>
+            <div class="sub-mainview__box">
+              <h1 class="sub-mainview__title"><?php the_title(); ?></h1>
+            </div>
+          <?php endwhile; ?>
+        <?php endif; ?>
       </div>
-      <?php endwhile; ?>
-      <?php endif; ?>
-    </div>
     <?php endif; ?>
     <!-- breadcrumbs -->
     <?php if (!is_front_page()) : ?>
-    <div class="breadcrumbs inner" typeof="BreadcrumbList" vocab="https://schema.org/">
-      <?php if (function_exists('bcn_display')) {
+      <div class="breadcrumbs inner" typeof="BreadcrumbList" vocab="https://schema.org/">
+        <?php if (function_exists('bcn_display')) {
           bcn_display();
         } ?>
-    </div>
+      </div>
     <?php endif; ?>
