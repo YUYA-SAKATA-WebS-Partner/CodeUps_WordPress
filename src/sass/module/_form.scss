@@ -261,3 +261,32 @@ textarea {
 .validation-error::placeholder {
   color: $white;
 }
+
+// Contactform7
+
+.wpcf7 form.invalid .wpcf7-response-output {
+  border: none;
+  text-align: center;
+  color: $red;
+}
+
+.form__check .wpcf7-list-item {
+  display: block;
+}
+
+.form__check .wpcf7-list-item:not(:first-child) {
+  margin-top: myrem(4);
+}
+
+.wpcf7-spinner {
+  display: none;
+}
+
+.wpcf7-not-valid {
+  border-color: $red;
+  background-color: rgba($color: $red, $alpha: 0.2);
+}
+
+.wpcf7-not-valid::placeholder {
+  color: $white;
+}

@@ -289,6 +289,22 @@ $sitemap = esc_url(home_url('/sitemap'));
         <h1 class="sub-mainview__title">FAQ</h1>
       </div>
     </div>
+    <?php elseif (is_page('contact') || is_page('thanks')) : ?>
+    <div class="sub-mainview">
+      <picture class="sub-mainview__image">
+        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-contact_mv_pc.webp"
+          media="(min-width: 768px)" type="image/webp">
+        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-contact_mv_pc.jpg"
+          media="(min-width: 768px)">
+        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-contact_mv_sp.webp"
+          type="image/webp">
+        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-contact_mv_sp.jpg"
+          alt="広い砂浜と波打ち際の風景">
+      </picture>
+      <div class="sub-mainview__box">
+        <h1 class="sub-mainview__title">Contact</h1>
+      </div>
+    </div>
     <?php elseif (!(is_front_page() || is_404())) : ?>
     <div class="sub-mainview">
       <picture class="sub-mainview__image">

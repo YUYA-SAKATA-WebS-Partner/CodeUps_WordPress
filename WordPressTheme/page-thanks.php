@@ -1,6 +1,4 @@
 <?php get_header(); ?>
-<!-- breadcrumbs -->
-<div class="breadcrumbs inner">TOP > お問い合わせ > 送信完了</div>
 
 <!-- content -->
 <div class="page-thanks sub-page-thanks-layout">
