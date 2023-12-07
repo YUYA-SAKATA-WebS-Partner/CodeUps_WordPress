@@ -1,6 +1,22 @@
 <?php get_header(); ?>
-<!-- breadcrumbs -->
-<div class="breadcrumbs inner">TOP > サイトマップ</div>
+
+<?php
+$home = esc_url(home_url('/'));
+$campaign = esc_url(home_url('/campaign'));
+$license = esc_url(home_url('/campaign_category/license/'));
+$experience = esc_url(home_url('/campaign_category/experience/'));
+$diving = esc_url(home_url('/campaign_category/diving/'));
+$about = esc_url(home_url('/about-us'));
+$information = esc_url(home_url('/information'));
+$blog = esc_url(home_url('/blog'));
+$voice = esc_url(home_url('/voice'));
+$price = esc_url(home_url('/price'));
+$faq = esc_url(home_url('/faq'));
+$contact = esc_url(home_url('/contact'));
+$policy = esc_url(home_url('/privacy-policy'));
+$terms = esc_url(home_url('/terms-of-service'));
+$sitemap = esc_url(home_url('/sitemap'));
+?>
 
 <!-- content -->
 <div class="page-sitemap sub-page-sitemap-layout">
@@ -11,9 +27,12 @@
           <li class="footer-nav__item footer-nav__item--black">
             <a href="<?php echo $campaign; ?>">キャンペーン</a>
             <ul class="footer-nav__sub-items">
-              <li class="footer-nav__sub-item footer-nav__sub-item--black"><a href="#">ライセンス取得</a></li>
-              <li class="footer-nav__sub-item footer-nav__sub-item--black"><a href="#">貸切体験ダイビング</a></li>
-              <li class="footer-nav__sub-item footer-nav__sub-item--black"><a href="#">ナイトダイビング</a></li>
+              <li class="footer-nav__sub-item footer-nav__sub-item--black"><a href="<?php echo $license; ?>">ライセンス取得</a>
+              </li>
+              <li class="footer-nav__sub-item footer-nav__sub-item--black"><a
+                  href="<?php echo $experience; ?>">貸切体験ダイビング</a></li>
+              <li class="footer-nav__sub-item footer-nav__sub-item--black"><a href="<?php echo $diving; ?>">ナイトダイビング</a>
+              </li>
             </ul>
           </li>
           <li class="footer-nav__item footer-nav__item--black"><a href="<?php echo $about; ?>">私たちについて</a></li>
@@ -22,9 +41,15 @@
           <li class="footer-nav__item footer-nav__item--black">
             <a href="<?php echo $information; ?>">ダイビング情報</a>
             <ul class="footer-nav__sub-items">
-              <li class="footer-nav__sub-item footer-nav__sub-item--black"><a href="#">ライセンス講習</a></li>
-              <li class="footer-nav__sub-item footer-nav__sub-item--black"><a href="#">体験ダイビング</a></li>
-              <li class="footer-nav__sub-item footer-nav__sub-item--black"><a href="#">ファンダイビング</a></li>
+              <li class="footer-nav__sub-item footer-nav__sub-item--black"><a
+                  href="<?php echo $information; ?>#license">ライセンス講習</a>
+              </li>
+              <li class="footer-nav__sub-item footer-nav__sub-item--black"><a
+                  href="<?php echo $information; ?>#experience">体験ダイビング</a>
+              </li>
+              <li class="footer-nav__sub-item footer-nav__sub-item--black"><a
+                  href="<?php echo $information; ?>#fun-diving">ファンダイビング</a>
+              </li>
             </ul>
           </li>
           <li class="footer-nav__item footer-nav__item--black"><a href="<?php echo $blog; ?>">ブログ</a></li>
@@ -36,9 +61,12 @@
           <li class="footer-nav__item footer-nav__item--black">
             <a href="<?php echo $price; ?>">料金一覧</a>
             <ul class="footer-nav__sub-items">
-              <li class="footer-nav__sub-item footer-nav__sub-item--black"><a href="#">ライセンス講習</a></li>
-              <li class="footer-nav__sub-item footer-nav__sub-item--black"><a href="#">体験ダイビング</a></li>
-              <li class="footer-nav__sub-item footer-nav__sub-item--black"><a href="#">ファンダイビング</a></li>
+              <li class="footer-nav__sub-item footer-nav__sub-item--black"><a
+                  href="<?php echo $price; ?>#price-license">ライセンス講習</a></li>
+              <li class="footer-nav__sub-item footer-nav__sub-item--black"><a
+                  href="<?php echo $price; ?>#price-experience">体験ダイビング</a></li>
+              <li class="footer-nav__sub-item footer-nav__sub-item--black"><a
+                  href="<?php echo $price; ?>#price-fun-diving">ファンダイビング</a></li>
             </ul>
           </li>
         </ul>

@@ -263,7 +263,25 @@ jQuery(function ($) {
     $('.js-information-card').removeClass('current');
     $('.js-information-card').eq(index).addClass('current');
   });
+
+  //location.hashで#以下を取得 変数hashに格納
+  var hash = location.hash;
+  //hashに要素が存在する場合、hashで取得した文字列から#より後を取得
+  if($(hash).length){
+    var tabname = hash.slice(1) ;
+  } else{
+    // 要素が存在しなければtabnameにlicenseを代入する
+    var tabname = "license";}
+  $('.js-information-card').removeClass('current');
+  $('.js-information-tab').removeClass('current');
+
+  var tabno = $('.js-information-tab#' + tabname).index();
+
+  $('.js-information-card').eq(tabno).addClass('current');
+  $('.js-information-tab').eq(tabno).addClass('current');
+
 });
+
 
 // =============================
 // フォームバリデーション
@@ -319,3 +337,5 @@ $(document).ready(function () {
     }
   });
 });
+
+

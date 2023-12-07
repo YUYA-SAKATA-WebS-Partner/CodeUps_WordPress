@@ -105,18 +105,18 @@ $sitemap = esc_url(home_url('/sitemap'));
             <li class="sp-nav__item">
               <a href="<?php echo $campaign; ?>">キャンペーン</a>
               <ul class="sp-nav__sub-items">
-                <li class="sp-nav__sub-item"><a href="#">ライセンス取得</a></li>
-                <li class="sp-nav__sub-item"><a href="#">貸切体験ダイビング</a></li>
-                <li class="sp-nav__sub-item"><a href="#">ナイトダイビング</a></li>
+                <li class="sp-nav__sub-item"><a href="<?php echo $license; ?>">ライセンス取得</a></li>
+                <li class="sp-nav__sub-item"><a href="<?php echo $experience; ?>">貸切体験ダイビング</a></li>
+                <li class="sp-nav__sub-item"><a href="<?php echo $diving; ?>">ナイトダイビング</a></li>
               </ul>
             </li>
             <li class="sp-nav__item"><a href="<?php echo $about; ?>">私たちについて</a></li>
             <li class="sp-nav__item">
               <a href="<?php echo $information; ?>">ダイビング情報</a>
               <ul class="sp-nav__sub-items">
-                <li class="sp-nav__sub-item"><a href="#">ライセンス講習</a></li>
-                <li class="sp-nav__sub-item"><a href="#">体験ダイビング</a></li>
-                <li class="sp-nav__sub-item"><a href="#">ファンダイビング</a></li>
+                <li class="sp-nav__sub-item"><a href="<?php echo $information; ?>#license">ライセンス講習</a></li>
+                <li class="sp-nav__sub-item"><a href="<?php echo $information; ?>#experience">体験ダイビング</a></li>
+                <li class="sp-nav__sub-item"><a href="<?php echo $information; ?>#fun-diving">ファンダイビング</a></li>
               </ul>
             </li>
             <li class="sp-nav__item"><a href="<?php echo $blog; ?>">ブログ</a></li>
@@ -126,9 +126,9 @@ $sitemap = esc_url(home_url('/sitemap'));
             <li class="sp-nav__item">
               <a href="<?php echo $price; ?>">料金一覧</a>
               <ul class="sp-nav__sub-items">
-                <li class="sp-nav__sub-item"><a href="#">ライセンス講習</a></li>
-                <li class="sp-nav__sub-item"><a href="#">体験ダイビング</a></li>
-                <li class="sp-nav__sub-item"><a href="#">ファンダイビング</a></li>
+                <li class="sp-nav__sub-item"><a href="<?php echo $price; ?>#price-license">ライセンス講習</a></li>
+                <li class="sp-nav__sub-item"><a href="<?php echo $price; ?>#price-experience">体験ダイビング</a></li>
+                <li class="sp-nav__sub-item"><a href="<?php echo $price; ?>#price-fun-diving">ファンダイビング</a></li>
               </ul>
             </li>
             <li class="sp-nav__item"><a href="<?php echo $faq; ?>">よくある質問</a></li>
@@ -303,6 +303,22 @@ $sitemap = esc_url(home_url('/sitemap'));
       </picture>
       <div class="sub-mainview__box">
         <h1 class="sub-mainview__title">Contact</h1>
+      </div>
+    </div>
+    <?php elseif (is_page('sitemap')) : ?>
+    <div class="sub-mainview">
+      <picture class="sub-mainview__image">
+        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-sitemap_mv_pc.webp"
+          media="(min-width: 768px)" type="image/webp">
+        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-sitemap_mv_pc.jpg"
+          media="(min-width: 768px)">
+        <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-sitemap_mv_sp.webp"
+          type="image/webp">
+        <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/page-sitemap_mv_sp.jpg"
+          alt="広い砂浜と波打ち際の風景">
+      </picture>
+      <div class="sub-mainview__box">
+        <h1 class="sub-mainview__title">Site MAP</h1>
       </div>
     </div>
     <?php elseif (!(is_front_page() || is_404())) : ?>
