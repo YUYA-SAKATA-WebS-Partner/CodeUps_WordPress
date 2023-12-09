@@ -43,6 +43,11 @@
   margin-top: myrem(40);
 }
 
+.page-privacy-policy__contents ul {
+  list-style: disc;
+  margin-left: myrem(25);
+}
+
 .page-privacy-policy__text:not(:first-of-type) {
   margin-top: myrem(32);
 }
@@ -62,4 +67,25 @@
 .page-privacy-policy__subitems {
   margin-top: myrem(32);
   padding-left: 1em;
+}
+
+.page-privacy-policy__contents ol {
+  list-style: decimal;
+  margin-left: myrem(25);
+  margin-top: myrem(30);
+}
+
+.page-privacy-policy__contents ol li {
+  font-size: myrem(16);
+  font-weight: $regular;
+  line-height: 2;
+  color: $black;
+}
+
+.page-privacy-policy__contents p {
+  font-size: myrem(16);
+  font-weight: $regular;
+  line-height: 2;
+  color: $black;
+  margin-top: myrem(30);
 }

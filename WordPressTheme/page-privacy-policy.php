@@ -1,6 +1,4 @@
 <?php get_header(); ?>
-<!-- breadcrumbs -->
-<div class="breadcrumbs inner">TOP > プライバシーポリシー</div>
 
 <div class="page-privacy-policy sub-page-privacy-policy-layout">
   <div class="page-privacy-policy__inner inner">

@@ -2002,6 +2002,11 @@ textarea {
 	margin-top: 2.5rem;
 }
 
+.page-privacy-policy__contents ul {
+	list-style: disc;
+	margin-left: 1.5625rem;
+}
+
 .page-privacy-policy__text:not(:first-of-type) {
 	margin-top: 2rem;
 }
@@ -2021,6 +2026,27 @@ textarea {
 .page-privacy-policy__subitems {
 	margin-top: 2rem;
 	padding-left: 1em;
+}
+
+.page-privacy-policy__contents ol {
+	list-style: decimal;
+	margin-left: 1.5625rem;
+	margin-top: 1.875rem;
+}
+
+.page-privacy-policy__contents ol li {
+	color: #0D2936;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 2;
+}
+
+.page-privacy-policy__contents p {
+	color: #0D2936;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 2;
+	margin-top: 1.875rem;
 }
 
 .page-sitemap__inner {
