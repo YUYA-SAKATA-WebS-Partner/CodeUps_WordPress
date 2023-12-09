@@ -2004,7 +2004,7 @@ textarea {
 
 .page-privacy-policy__contents ul {
 	list-style: disc;
-	margin-left: 1.5625rem;
+	margin-left: 0.9375rem;
 }
 
 .page-privacy-policy__text:not(:first-of-type) {
@@ -2030,7 +2030,7 @@ textarea {
 
 .page-privacy-policy__contents ol {
 	list-style: decimal;
-	margin-left: 1.5625rem;
+	margin-left: 0.9375rem;
 	margin-top: 1.875rem;
 }
 
@@ -2107,6 +2107,32 @@ textarea {
 
 .page-terms__lists {
 	padding-left: 1em;
+}
+
+.page-terms__contents ul {
+	list-style: disc;
+	margin-left: 0.9375rem;
+}
+
+.page-terms__contents ol {
+	list-style: decimal;
+	margin-left: 0.9375rem;
+	margin-top: 1.875rem;
+}
+
+.page-terms__contents ol li {
+	color: #0D2936;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 2;
+}
+
+.page-terms__contents p {
+	color: #0D2936;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 2;
+	margin-top: 1.875rem;
 }
 
 .page-thanks__inner {
@@ -3897,6 +3923,14 @@ html {
 	font-size: 2rem;
 }
 
+.page-privacy-policy__contents ul {
+	margin-left: 1.5625rem;
+}
+
+.page-privacy-policy__contents ol {
+	margin-left: 1.5625rem;
+}
+
 .page-sitemap__inner::before {
 	display: none;
 	top: -1.5rem;
@@ -3916,6 +3950,14 @@ html {
 
 .page-terms__title {
 	font-size: 2rem;
+}
+
+.page-terms__contents ul {
+	margin-left: 1.5625rem;
+}
+
+.page-terms__contents ol {
+	margin-left: 1.5625rem;
 }
 
 .page-thanks__inner::before {

@@ -58,3 +58,35 @@
 .page-terms__lists {
   padding-left: 1em;
 }
+
+.page-terms__contents ul {
+  list-style: disc;
+  margin-left: myrem(15);
+  @include mq(md) {
+    margin-left: myrem(25);
+  }
+}
+
+.page-terms__contents ol {
+  list-style: decimal;
+  margin-left: myrem(15);
+  margin-top: myrem(30);
+  @include mq(md) {
+    margin-left: myrem(25);
+  }
+}
+
+.page-terms__contents ol li {
+  font-size: myrem(16);
+  font-weight: $regular;
+  line-height: 2;
+  color: $black;
+}
+
+.page-terms__contents p {
+  font-size: myrem(16);
+  font-weight: $regular;
+  line-height: 2;
+  color: $black;
+  margin-top: myrem(30);
+}
