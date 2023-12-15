@@ -13,7 +13,7 @@ $home = esc_url(home_url('/'));
 $campaign = esc_url(home_url('/campaign'));
 $license = esc_url(home_url('/campaign_category/license/'));
 $experience = esc_url(home_url('/campaign_category/experience/'));
-$diving = esc_url(home_url('/campaign_category/diving/'));
+$diving = esc_url(home_url('/campaign_category/fun-diving/'));
 $about = esc_url(home_url('/about-us'));
 $information = esc_url(home_url('/information'));
 $blog = esc_url(home_url('/blog'));
@@ -106,8 +106,8 @@ $sitemap = esc_url(home_url('/sitemap'));
               <a href="<?php echo $campaign; ?>">キャンペーン</a>
               <ul class="sp-nav__sub-items">
                 <li class="sp-nav__sub-item"><a href="<?php echo $license; ?>">ライセンス取得</a></li>
-                <li class="sp-nav__sub-item"><a href="<?php echo $experience; ?>">貸切体験ダイビング</a></li>
-                <li class="sp-nav__sub-item"><a href="<?php echo $diving; ?>">ナイトダイビング</a></li>
+                <li class="sp-nav__sub-item"><a href="<?php echo $experience; ?>">体験ダイビング</a></li>
+                <li class="sp-nav__sub-item"><a href="<?php echo $diving; ?>">ファンダイビング</a></li>
               </ul>
             </li>
             <li class="sp-nav__item"><a href="<?php echo $about; ?>">私たちについて</a></li>

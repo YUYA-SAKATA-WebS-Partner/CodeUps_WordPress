@@ -7,10 +7,10 @@
       <li class="icon-tab__tab js-information-tab current" data-tab="license" id="license">
         <button class="icon-tab__button">ライセンス<br class="u-mobile">講習</button>
       </li>
-      <li class="icon-tab__tab js-information-tab" data-tab="experience" id="experience">
+      <li class="icon-tab__tab js-information-tab" data-tab="fun-diving" id="fun-diving">
         <button class="icon-tab__button">ファン<br class="u-mobile">ダイビング</button>
       </li>
-      <li class="icon-tab__tab js-information-tab" data-tab="fun-diving" id="fun-diving">
+      <li class="icon-tab__tab js-information-tab" data-tab="experience" id="experience">
         <button class="icon-tab__button">体験<br class="u-mobile">ダイビング</button>
       </li>
     </ul>
@@ -33,7 +33,7 @@
           </div>
         </div>
       </li>
-      <li class="page-information__card information-card js-information-card" data-tab="experience">
+      <li class="page-information__card information-card js-information-card" data-tab="fun-diving">
         <div class="information-card__inner">
           <div class="information-card__body">
             <div class="information-card__content">
@@ -50,7 +50,7 @@
           </div>
         </div>
       </li>
-      <li class="page-information__card information-card js-information-card" data-tab="fun-diving">
+      <li class="page-information__card information-card js-information-card" data-tab="experience">
         <div class="information-card__inner">
           <div class="information-card__body">
             <div class="information-card__content">

@@ -48,10 +48,10 @@ jQuery(function ($) {
     slidesPerView: "auto",
     spaceBetween: 24,
     speed: 2000,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
     breakpoints: {
       768: {
         spaceBetween: 40
@@ -236,22 +236,20 @@ jQuery(function ($) {
   }
 
   // =============================
-  // footer リンク(information)
+  // タブリンク(information)
   // =============================
-  $(document).ready(function () {
-    // 現在のURLからクエリパラメータを抽出
-    var urlParams = new URLSearchParams(window.location.search);
+    var hash = location.hash;
 
-    // 'tab' キーに関連する値を取得
-    var activeTab = urlParams.get("tab");
-
-    // クエリパラメータ 'tab' が存在するかチェック
-    if (activeTab) {
-      // すべてのタブを非表示にし、アクティブなタブを表示
-      $(".js-information-tab, .js-information-card").removeClass('current');
-      $('[data-tab="' + activeTab + '"]').addClass('current');
+    if($(hash).length){
+    var tabname = hash.slice(1) ;
+    } else {
+      var tabname = "license";
     }
-  });
+
+      $('.js-information-card').removeClass('current');
+      $('.js-information-tab').removeClass('current');
+
+    $('[data-tab="' + tabname + '"]').addClass('current');
 
   // =============================
   // information タブ

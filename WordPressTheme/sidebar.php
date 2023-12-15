@@ -1,4 +1,5 @@
 <?php
+$campaign = esc_url(home_url('/campaign'));
 $voice = esc_url(home_url('/voice'));
 ?>
 
@@ -127,7 +128,7 @@ $voice = esc_url(home_url('/voice'));
           </ul>
           <?php endif; ?>
           <div class="widget-campaign__button">
-            <a href="#" class="widget-button"><span>View more</span></a>
+            <a href="<?php echo $campaign; ?>" class="widget-button button"><span>View more</span></a>
           </div>
         </div>
       </div>
