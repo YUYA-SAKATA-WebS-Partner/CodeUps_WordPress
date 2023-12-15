@@ -48,10 +48,10 @@ jQuery(function ($) {
     slidesPerView: "auto",
     spaceBetween: 24,
     speed: 2000,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false
+    // },
     breakpoints: {
       768: {
         spaceBetween: 40

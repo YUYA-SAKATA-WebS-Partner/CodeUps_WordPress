@@ -271,7 +271,7 @@ a {
 
 .about__heading {
 	color: #408F95;
-	font-family: Gotu, sans-serif;
+	font-family: "Gotu", sans-serif;
 	font-size: 2.5rem;
 	font-weight: 400;
 	line-height: 1;
@@ -434,7 +434,7 @@ a {
 .article__date {
 	color: #0D2936;
 	display: block;
-	font-family: Gotu, sans-serif;
+	font-family: "Gotu", sans-serif;
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.2857142857;
@@ -542,7 +542,7 @@ a {
 .button span,
 .button span .wpcf7-form-control {
 	color: #fff;
-	font-family: Gotu, sans-serif;
+	font-family: "Gotu", sans-serif;
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.5714;
@@ -679,7 +679,7 @@ a {
 
 .campaign-card__price {
 	color: #0D2936;
-	font-family: Lato, sans-serif;
+	font-family: "Lato", sans-serif;
 	font-size: 1.25rem;
 	font-weight: 700;
 	line-height: 1.2;
@@ -700,7 +700,7 @@ a {
 
 .campaign-card__discount {
 	color: #408F95;
-	font-family: Lato, sans-serif;
+	font-family: "Lato", sans-serif;
 	font-size: 2rem;
 	font-weight: 700;
 	line-height: 1;
@@ -720,7 +720,7 @@ a {
 
 .campaign-card__date {
 	color: #408F95;
-	font-family: Lato, sans-serif;
+	font-family: "Lato", sans-serif;
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 1.125;
@@ -823,7 +823,7 @@ a {
 
 .card__date {
 	color: #0D2936;
-	font-family: Gotu, sans-serif;
+	font-family: "Gotu", sans-serif;
 	font-size: 0.75rem;
 	font-weight: 400;
 	line-height: 1.5;
@@ -899,7 +899,7 @@ a {
 .contact-banner__main-title {
 	color: #0D2936;
 	display: block;
-	font-family: Gotu, sans-serif;
+	font-family: "Gotu", sans-serif;
 	font-size: 5rem;
 	font-weight: 400;
 	line-height: 1;
@@ -1082,7 +1082,7 @@ a {
 
 .footer__copyright span {
 	color: #fff;
-	font-family: Gotu, sans-serif;
+	font-family: "Gotu", sans-serif;
 	font-size: 0.75rem;
 	font-weight: 400;
 }
@@ -1650,7 +1650,7 @@ textarea {
 
 .mainview__title {
 	color: #fff;
-	font-family: Lato, sans-serif;
+	font-family: "Lato", sans-serif;
 	font-size: 2.5rem;
 	font-weight: 400;
 	letter-spacing: 0.53em;
@@ -1661,7 +1661,7 @@ textarea {
 
 .mainview__subtitle {
 	color: #fff;
-	font-family: Gotu, sans-serif;
+	font-family: "Gotu", sans-serif;
 	font-size: 1.25rem;
 	font-weight: 400;
 	margin-top: 0.3125rem;
@@ -1728,7 +1728,7 @@ textarea {
 
 .page-404__title {
 	color: #fff;
-	font-family: Lato, sans-serif;
+	font-family: "Lato", sans-serif;
 	font-size: 5rem;
 	font-weight: 400;
 	letter-spacing: 0.5em;
@@ -1802,7 +1802,7 @@ textarea {
 	color: #408F95;
 	color: #fff;
 	display: inline-block;
-	font-family: Gotu, sans-serif;
+	font-family: "Gotu", sans-serif;
 	font-size: 2.5rem;
 	font-weight: 400;
 	left: 1.5rem;
@@ -2211,12 +2211,9 @@ body {
 	opacity: 0.8;
 }
 
-.panel__image {
-	aspect-ratio: 280/188;
-}
-
 .panel__image img {
 	-o-object-fit: cover;
+	aspect-ratio: 280/188;
 	height: 100%;
 	object-fit: cover;
 	width: 100%;
@@ -2273,7 +2270,7 @@ body {
 
 .panel__price {
 	color: #0D2936;
-	font-family: Lato, sans-serif;
+	font-family: "Lato", sans-serif;
 	font-size: 1.25rem;
 	font-weight: 700;
 	line-height: 1.2;
@@ -2294,7 +2291,7 @@ body {
 
 .panel__discount {
 	color: #408F95;
-	font-family: Lato, sans-serif;
+	font-family: "Lato", sans-serif;
 	font-size: 2rem;
 	font-weight: 700;
 	line-height: 1;
@@ -2314,7 +2311,7 @@ body {
 
 .panel__date {
 	color: #408F95;
-	font-family: Lato, sans-serif;
+	font-family: "Lato", sans-serif;
 	font-size: 1rem;
 	font-weight: 700;
 	letter-spacing: 0.03em;
@@ -2377,7 +2374,7 @@ body {
 .pc-nav__title {
 	color: #fff;
 	display: block;
-	font-family: Gotu, sans-serif;
+	font-family: "Gotu", sans-serif;
 	font-size: 1.125rem;
 	font-weight: 400;
 	line-height: 1;
@@ -2429,7 +2426,7 @@ body {
 .popular__time {
 	color: #0D2936;
 	display: block;
-	font-family: Gotu, sans-serif;
+	font-family: "Gotu", sans-serif;
 	font-size: 0.75rem;
 	font-weight: 400;
 	line-height: 1.5;
@@ -2590,7 +2587,7 @@ body {
 .section-title__main {
 	color: #0D2936;
 	display: block;
-	font-family: Gotu, sans-serif;
+	font-family: "Gotu", sans-serif;
 	font-size: 2rem;
 	font-weight: 400;
 	line-height: 1.23;
@@ -2760,7 +2757,7 @@ body.fixed {
 
 .sub-mainview__title {
 	color: #fff;
-	font-family: Lato, sans-serif;
+	font-family: "Lato", sans-serif;
 	font-size: 2.5rem;
 	font-weight: 400;
 	line-height: 1.5;
@@ -3987,12 +3984,12 @@ html {
 	margin-top: 4.5rem;
 }
 
-.panel__image {
+.panel__image img {
 	aspect-ratio: 333/223;
 }
 
 .panel__body {
-	padding: 1.5rem 1.5rem 2.5rem;
+	padding: 1.5rem 1rem 2.5rem;
 }
 
 .panel__body--narrow {

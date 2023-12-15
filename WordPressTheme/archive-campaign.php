@@ -62,7 +62,7 @@ $contact = esc_url(home_url('/contact'));
                   <?php echo "¥" . number_format($campaignPrice['regular_price'], 0, '', ','); ?>
                 </p>
                 <p class="panel__discount">
-                  <?php echo "¥" . number_format($campaignPrice['discount_price'], 0, '', ','); ?>
+                  <?php echo "¥".number_format($campaignPrice['discount_price'], 0, '', ','); ?>
                 </p>
               </div>
             </div>

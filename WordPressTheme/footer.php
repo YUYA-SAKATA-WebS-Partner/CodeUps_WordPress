@@ -66,7 +66,7 @@ $sitemap = esc_url(home_url('/sitemap'));
     <div class="footer__inner inner">
       <div class="footer__header">
         <h2 class="footer__logo">
-          <a href="#">
+          <a href="<?php echo $home; ?>">
             <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/logo.svg" alt="CodeUps">
           </a>
         </h2>

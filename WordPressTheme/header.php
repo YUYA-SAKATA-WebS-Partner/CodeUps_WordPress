@@ -148,45 +148,26 @@ $sitemap = esc_url(home_url('/sitemap'));
     <div class="mainview">
       <div class="mainview__slide swiper js-top-swiper">
         <div class="swiper-wrapper">
+          <?php
+            $image_pc = get_field('mainview-slider_pc');
+            $image_sp = get_field('mainview-slider_sp');
+            $image_text = get_field('image_alt');
+          ?>
           <picture class="mainview__image swiper-slide">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview1.webp"
-              media="(min-width: 768px)" type="image/webp">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview1.jpg"
-              media="(min-width: 768px)">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview1-sp.webp"
-              type="image/webp">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview1-sp.jpg"
-              alt="茶色いウミガメが透き通ったエメラルドグリーンの海中で泳いでいる様子">
+            <source srcset="<?php echo $image_pc['slider-image1_pc']; ?>" media="(min-width: 768px)">
+            <img src="<?php echo $image_sp['slider-image1_sp']; ?>" alt="<?php echo $image_text['image_alt_1']; ?>">
           </picture>
           <picture class="mainview__image swiper-slide">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview2.webp"
-              media="(min-width: 768px)" type="image/webp">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview2.jpg"
-              media="(min-width: 768px)">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview2-sp.webp"
-              type="image/webp">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview2-sp.jpg"
-              alt="日が差し込む海中で２人のダイバーとウミガメが向かい合って泳いでいる様子">
+            <source srcset="<?php echo $image_pc['slider-image2_pc']; ?>" media="(min-width: 768px)">
+            <img src="<?php echo $image_sp['slider-image2_sp']; ?>" alt="<?php echo $image_text['image_alt_2']; ?>">
           </picture>
           <picture class="mainview__image swiper-slide">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview3.webp"
-              media="(min-width: 768px)" type="image/webp">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview3.jpg"
-              media="(min-width: 768px)">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview3-sp.webp"
-              type="image/webp">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview3-sp.jpg"
-              alt="晴れた空と島をバックに3台のフェリーが海上を進んでいる様子">
+            <source srcset="<?php echo $image_pc['slider-image3_pc']; ?>" media="(min-width: 768px)">
+            <img src="<?php echo $image_sp['slider-image3_sp']; ?>" alt="<?php echo $image_text['image_alt_3']; ?>">
           </picture>
           <picture class="mainview__image swiper-slide">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview4.webp"
-              media="(min-width: 768px)" type="image/webp">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview4.jpg"
-              media="(min-width: 768px)">
-            <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview4-sp.webp"
-              type="image/webp">
-            <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/mainview4-sp.jpg"
-              alt="大きな雲が浮かぶ青空とエメラルドグリーンの海を見渡せる広大な砂浜">
+            <source srcset="<?php echo $image_pc['slider-image4_pc']; ?>" media="(min-width: 768px)">
+            <img src="<?php echo $image_sp['slider-image4_sp']; ?>" alt="<?php echo $image_text['image_alt_4']; ?>">
           </picture>
         </div>
       </div>
@@ -375,7 +356,7 @@ $sitemap = esc_url(home_url('/sitemap'));
     </div>
     <?php endif; ?>
     <!-- breadcrumbs -->
-    <?php if (!is_front_page()) : ?>
+    <?php if (!(is_front_page() || is_404())) : ?>
     <div class="breadcrumbs inner" typeof="BreadcrumbList" vocab="https://schema.org/">
       <?php if (function_exists('bcn_display')) {
           bcn_display();
