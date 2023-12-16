@@ -149,6 +149,19 @@ function setPostViews($postID)
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
 /****************************
+記事詳細ページ　ナビゲーションにclass名追加
+ ****************************/
+//前の記事・次の記事のリンクにclassを付与する
+function add_prev_post_link_class($output) {
+  return str_replace('<a href=', '<a class="previouspostslink" href=', $output); //前の記事リンク
+}
+add_filter( 'previous_post_link', 'add_prev_post_link_class' );
+function add_next_post_link_class($output) {
+  return str_replace('<a href=', '<a class="nextpostslink" href=', $output); //次の記事リンク
+}
+add_filter( 'next_post_link', 'add_next_post_link_class' );
+
+/****************************
 カスタム投稿タイプのタイトル一覧をContact Form 7にドロップダウン形式で表示
  ****************************/
 function dynamic_field_values ( $tag, $unused ) {

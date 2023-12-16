@@ -3118,35 +3118,8 @@ body.fixed {
 	gap: 5.125rem;
 }
 
-.wp-pagenavi--arrow .previouspostslink,
-.wp-pagenavi--arrow .nextpostslink {
-	margin: 0;
-	position: relative;
-}
-
-.wp-pagenavi--arrow .previouspostslink::before,
-.wp-pagenavi--arrow .nextpostslink::before {
-	border-bottom: 0.0625rem solid #408F95;
-	content: "";
-	height: 0.70625rem;
-	left: 50%;
-	position: absolute;
-	top: 50%;
-	width: 0.70625rem;
-}
-
-.wp-pagenavi--arrow .previouspostslink::before {
-	border-left: 0.0625rem solid #408F95;
-	transform: translate(-25%, -50%) rotate(45deg);
-}
-
-.wp-pagenavi--arrow .nextpostslink::before {
-	border-right: 0.0625rem solid #408F95;
-	transform: translate(-75%, -50%) rotate(-45deg);
-}
-
-.wp-pagenavi--arrow .previouspostslink:hover::before,
-.wp-pagenavi--arrow .nextpostslink:hover::before {
+.previouspostslink:hover::before,
+.nextpostslink:hover::before {
 	border-color: #fff;
 }
 
