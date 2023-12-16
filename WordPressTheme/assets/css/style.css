@@ -2816,7 +2816,7 @@ body.fixed {
 	text-transform: uppercase;
 }
 
-.tab__item.is-active > a {
+.tab__item > a.is-active {
 	background-color: #408F95;
 	color: #fff;
 }

@@ -61,7 +61,7 @@
   text-transform: uppercase;
 }
 
-.tab__item.is-active>a {
+.tab__item>a.is-active {
   background-color: $green;
   color: $white;
 }
