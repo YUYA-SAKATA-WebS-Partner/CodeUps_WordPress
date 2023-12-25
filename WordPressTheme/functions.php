@@ -102,9 +102,6 @@ function change_set_campaign($query)
   } elseif ($query->is_post_type_archive('voice')) {
     $query->set('posts_per_page', '6');
     return;
-  } elseif ($query->is_home() || $query->is_date()) {
-    $query->set('posts_per_page', '10');
-    return;
   }
 }
 add_action('pre_get_posts', 'change_set_campaign');

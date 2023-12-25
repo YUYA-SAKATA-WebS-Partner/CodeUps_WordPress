@@ -43,12 +43,15 @@
 }
 
 .campaign__arrows {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  top: 0%;
-  right: myrem(25);
-  width: myrem(240);
+  display: none;
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0%;
+    right: myrem(25);
+    width: myrem(240);
+  }
 }
 
 .campaign__arrow-next,

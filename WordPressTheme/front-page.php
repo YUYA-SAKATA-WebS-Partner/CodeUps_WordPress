@@ -225,7 +225,14 @@ $sitemap = esc_url(home_url('/sitemap'));
                   ?>
               <div class="text-card__age">
                 <?php echo $voiceInfo['voice_age'] . "(" . $voiceInfo['voice_gender'] . ")"; ?></div>
-              <span class="text-card__category category-tag">ライセンス講習</span>
+              <span class="text-card__category category-tag">
+                <?php
+                  $terms = get_the_terms($post->ID, 'voice_category');
+                  foreach ($terms as $term) {
+                    echo $term->name;
+                  };
+                  ?>
+              </span>
             </div>
             <h3 class="text-card__title"><?php the_title(); ?></h3>
           </div>
@@ -239,7 +246,15 @@ $sitemap = esc_url(home_url('/sitemap'));
         </div>
         <div class="text-card__body">
           <p class="text-card__text text">
-            <?php the_field('voice_text') ?>
+            <?php
+            $voice_text = get_field('voice_text');
+            if(mb_strlen($voice_text) > 169){
+              echo mb_substr($voice_text,0,169,"UTF-8") . "...";
+            }
+            else {
+              echo $voice_text;
+            }
+            ?>
           </p>
         </div>
       </div>

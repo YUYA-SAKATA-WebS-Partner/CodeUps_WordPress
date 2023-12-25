@@ -139,6 +139,27 @@ jQuery(function ($) {
     }
   });
 
+  // =============================
+  // カテゴリータブ(campaign,voice)
+  // =============================
+  $('.js-tab-item').click(function () {
+    // クリックされたタブのデータ属性からカテゴリーを取得
+    var category = $(this).data('category');
+
+    // タブの表示を切り替えるための処理
+    $('.js-tab-content').hide();
+    $('.js-tab-item').removeClass('is-active');
+    $(this).toggleClass('is-active');
+
+    // カテゴリーが "all" の場合、すべての記事を表示
+    if (category === 'all') {
+      $('.js-tab-content').fadeIn();
+    } else {
+      // カテゴリーが "all" 以外の場合、該当するカテゴリーの記事のみを表示
+      $('.js-tab-content').filter('[data-category="' + category + '"]').fadeIn();
+    }
+    ;
+  });
 
   // =============================
   // FAQアコーディオン
@@ -215,20 +236,38 @@ jQuery(function ($) {
   }
 
   // =============================
+  // footer リンク(information)
+  // =============================
+  $(document).ready(function () {
+    // 現在のURLからクエリパラメータを抽出
+    var urlParams = new URLSearchParams(window.location.search);
+
+    // 'tab' キーに関連する値を取得
+    var activeTab = urlParams.get("tab");
+
+    // クエリパラメータ 'tab' が存在するかチェック
+    if (activeTab) {
+      // すべてのタブを非表示にし、アクティブなタブを表示
+      $(".js-information-tab, .js-information-card").removeClass('current');
+      $('[data-tab="' + activeTab + '"]').addClass('current');
+    }
+  });
+
+  // =============================
   // タブリンク(information)
   // =============================
-    var hash = location.hash;
+  var hash = location.hash;
 
-    if($(hash).length){
-    var tabname = hash.slice(1) ;
-    } else {
-      var tabname = "license";
-    }
+  if($(hash).length){
+  var tabname = hash.slice(1) ;
+  } else {
+    var tabname = "license";
+  }
 
-      $('.js-information-card').removeClass('current');
-      $('.js-information-tab').removeClass('current');
+    $('.js-information-card').removeClass('current');
+    $('.js-information-tab').removeClass('current');
 
-    $('[data-tab="' + tabname + '"]').addClass('current');
+  $('[data-tab="' + tabname + '"]').addClass('current');
 
   // =============================
   // information タブ
@@ -240,6 +279,7 @@ jQuery(function ($) {
     $('.js-information-card').removeClass('current');
     $('.js-information-card').eq(index).addClass('current');
   });
+
 });
 
 // =============================

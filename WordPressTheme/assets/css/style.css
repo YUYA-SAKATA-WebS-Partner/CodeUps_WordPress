@@ -758,12 +758,7 @@ a {
 }
 
 .campaign__arrows {
-	display: flex;
-	justify-content: space-between;
-	position: absolute;
-	right: 1.5625rem;
-	top: 0%;
-	width: 15rem;
+	display: none;
 }
 
 .campaign__arrow-next,
@@ -3434,6 +3429,15 @@ html {
 
 .campaign__button {
 	margin-top: 4.375rem;
+}
+
+.campaign__arrows {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	right: 1.5625rem;
+	top: 0%;
+	width: 15rem;
 }
 
 .cards {

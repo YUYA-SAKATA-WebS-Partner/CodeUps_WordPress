@@ -42,8 +42,6 @@ if (!is_user_logged_in() && !is_robots()) {
           <?php if (get_next_post()):?>
           <?php next_post_link('%link', ''); ?>
           <?php endif; ?>
-          <!-- <a class="previouspostslink" rel="prev" href="#"><span></span></a>
-          <a class="nextpostslink" rel="next" href="#"><span></span></a> -->
         </div>
       </div>
       <!-- sidebar -->

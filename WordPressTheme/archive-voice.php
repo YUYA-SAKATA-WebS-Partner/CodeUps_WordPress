@@ -9,7 +9,7 @@
         <ul class="tab__items">
           <div class="tab__box">
             <li class="tab__item tab__item--large is-active js-tab-item">
-              <a href="<?php echo $voice; ?>">all</a>
+              <a href="<?php echo $voice; ?>" class="is-active">all</a>
             </li>
             <?php
             $args = [

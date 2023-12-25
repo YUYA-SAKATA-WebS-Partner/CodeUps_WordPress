@@ -72,12 +72,12 @@ $sitemap = esc_url(home_url('/sitemap'));
         </h2>
         <div class="footer__icons">
           <div class="footer__icon">
-            <a href="#">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
               <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/facebook.png" alt="Facebook">
             </a>
           </div>
           <div class="footer__icon">
-            <a href="#">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
               <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/instagram.png"
                 alt="Instagram">
             </a>
