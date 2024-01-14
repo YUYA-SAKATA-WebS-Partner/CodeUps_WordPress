@@ -400,6 +400,7 @@ a {
 	color: #408F95;
 	font-size: 1.5rem;
 	font-weight: 400;
+	list-style: none;
 	padding-left: 1.8125rem;
 	position: relative;
 }
@@ -2241,9 +2242,7 @@ body {
 
 .panel__box {
 	display: flex;
-	flex: 1;
 	flex-direction: column;
-	justify-content: flex-end;
 	margin-top: 0.5rem;
 }
 
@@ -2293,14 +2292,16 @@ body {
 }
 
 .panel__detail {
+	display: none;
 	margin-top: 1.5rem;
 }
 
 .panel__button {
 	align-items: center;
 	display: flex;
+	flex: 1;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-end;
 	margin-top: 2.125rem;
 }
 
@@ -4011,6 +4012,9 @@ html {
 }
 
 .panel__detail {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
 	margin-top: 1.8125rem;
 }
 

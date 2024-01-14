@@ -61,8 +61,8 @@
 .panel__box {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  flex: 1;
+  // justify-content: flex-end;
+  // flex: 1;
   margin-top: myrem(8);
   @include mq(md) {
     // margin-top: myrem(16);
@@ -146,16 +146,21 @@
 }
 
 .panel__detail {
+  display: none;
   margin-top: myrem(24);
   @include mq(md) {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     margin-top: myrem(29);
   }
 }
 
 .panel__button {
   display: flex;
+  flex: 1;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   flex-direction: column;
   margin-top: myrem(34);
   @include mq(md) {

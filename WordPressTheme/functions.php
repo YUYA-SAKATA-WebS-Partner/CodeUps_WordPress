@@ -72,6 +72,28 @@ add_action('init', 'Change_objectlabel');
 add_action('admin_menu', 'Change_menulabel');
 
 /****************************
+the_archive_title 余計な文字を削除
+ ****************************/
+add_filter( 'get_the_archive_title', function ($title) {
+  if (is_category()) {
+      $title = single_cat_title('',false);
+  } elseif (is_tag()) {
+      $title = single_tag_title('',false);
+} elseif (is_tax()) {
+    $title = single_term_title('',false);
+} elseif (is_post_type_archive() ){
+  $title = post_type_archive_title('',false);
+} elseif (is_year()) {
+  $title = get_the_time('Y年');
+} elseif (is_date()) {
+    $title = get_the_time('Y年n月');
+} else {
+
+}
+  return $title;
+});
+
+/****************************
 抜粋の文字数変更
  ****************************/
 function custom_excerpt_length($length)
