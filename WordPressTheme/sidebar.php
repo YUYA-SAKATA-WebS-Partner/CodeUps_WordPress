@@ -13,10 +13,10 @@ $voice = esc_url(home_url('/voice'));
           </div>
           <?php
           $args = [
-            'post_type' => 'post',
-            'meta_key' => 'post_view_count',
+            // 'post_type' => 'post',
+            'meta_key' => 'post_views_count',
             'orderby' => 'meta_value_num',
-            'posts_per_page' => '3',
+            'posts_per_page' => 3,
             'order' => 'DESC'
           ];
           $the_query = new WP_Query($args);
@@ -32,8 +32,7 @@ $voice = esc_url(home_url('/voice'));
                   <?php endif; ?>
                 </picture>
                 <div class="popular__box">
-                  <time class="popular__time"
-                    datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m/d'); ?></time>
+                  <time class="popular__time" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m/d'); ?></time>
                   <div class="popular__box-title"><?php the_title(); ?></div>
                 </div>
               </a>

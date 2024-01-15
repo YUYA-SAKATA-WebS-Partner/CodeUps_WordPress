@@ -31,9 +31,13 @@
     <div class="page-terms__inner inner">
       <div class="page-terms__body">
         <h2 class="page-terms__title">利用規約</h2>
+        <?php if (have_posts()) : ?>
         <div class="page-terms__contents">
+          <?php while (have_posts()) : the_post(); ?>
           <?php the_content(); ?>
+          <?php endwhile; ?>
         </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>

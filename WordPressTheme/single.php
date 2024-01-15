@@ -1,10 +1,4 @@
 <?php get_header(); ?>
-<?php
-// 記事のビュー数を更新(ログイン中・クローラーは除外)
-if (!is_user_logged_in() && !is_robots()) {
-  setPostViews(get_the_ID());
-}
-?>
 
 <main>
   <div class="sub-mainview">
@@ -36,12 +30,17 @@ if (!is_user_logged_in() && !is_robots()) {
         <div class="page-article__main">
           <!-- article -->
           <?php if (have_posts()) : ?>
+          <?php
+            // 記事のビュー数を更新(ログイン中・クローラーは除外)
+            if (!is_user_logged_in() && !is_bot()) {
+              setPostViews(get_the_ID());
+            }
+          ?>
           <article class="page-article__article article">
             <?php while (have_posts()) : the_post(); ?>
             <div class="article__header">
               <div class="article__meta">
-                <time class="article__date"
-                  datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m/d'); ?></time>
+                <time class="article__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m/d'); ?></time>
               </div>
               <h2 class="article__title"><?php the_title();?></h2>
             </div>

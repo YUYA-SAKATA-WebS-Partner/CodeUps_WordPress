@@ -31,9 +31,13 @@
     <div class="page-privacy-policy__inner inner">
       <div class="page-privacy-policy__body">
         <h2 class="page-privacy-policy__title">プライバシーポリシー</h2>
+        <?php if (have_posts()) : ?>
         <div class="page-privacy-policy__contents">
+          <?php while (have_posts()) : the_post(); ?>
           <?php the_content(); ?>
+          <?php endwhile; ?>
         </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>

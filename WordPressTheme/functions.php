@@ -157,15 +157,24 @@ function setPostViews($postID)
     $count++;
     update_post_meta($postID, $count_key, $count);
   }
-
-  // デバッグ start
-  // echo '';
-  // echo 'console.log("postID: ' . $postID .'");';
-  // echo 'console.log("カウント: ' . $count .'");';
-  // echo '';
-  // デバッグ end
 }
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+
+//クローラーのアクセス判別
+function is_bot() {
+  $ua = $_SERVER['HTTP_USER_AGENT'];
+  $bot = array(
+    "googlebot",
+    "msnbot",
+    "yahoo"
+  );
+  foreach( $bot as $bot ) {
+    if (stripos( $ua, $bot ) !== false){
+      return true;
+    }
+  }
+  return false;
+}
 
 /****************************
 記事詳細ページ　ナビゲーションにclass名追加

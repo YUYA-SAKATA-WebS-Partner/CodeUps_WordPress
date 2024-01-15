@@ -40,8 +40,7 @@ $blog = esc_url(home_url('/blog'));
                 <?php endif; ?>
               </picture>
               <div class="card__body">
-                <time class="card__date"
-                  datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m/d'); ?></time>
+                <time class="card__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m/d'); ?></time>
                 <h3 class="card__title"><?php the_title(); ?></h3>
                 <p class="card__text text">
                   <?php echo get_the_excerpt(); ?>
