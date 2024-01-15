@@ -13,7 +13,6 @@ $voice = esc_url(home_url('/voice'));
           </div>
           <?php
           $args = [
-            // 'post_type' => 'post',
             'meta_key' => 'post_views_count',
             'orderby' => 'meta_value_num',
             'posts_per_page' => 3,

@@ -50,7 +50,7 @@ $blog = esc_url(home_url('/blog'));
             <?php endwhile; ?>
           </div>
           <!-- pagenavi -->
-          <div class="two-column-template__pagenavi wp-pagenavi">
+          <div class="two-column-template__pagenavi">
             <?php if (function_exists('wp_pagenavi')) {
                 wp_pagenavi();
               } ?>

@@ -116,7 +116,7 @@ $term_slug = $term->slug;
           <?php endif; ?>
         </div>
       </div>
-      <div class="page-campaign__pagenavi wp-pagenavi">
+      <div class="page-campaign__pagenavi">
         <?php if (function_exists('wp_pagenavi')) {
         wp_pagenavi();
       } ?>

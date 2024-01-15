@@ -19,11 +19,13 @@
 .wp-pagenavi a:hover{
 	color: $white;
 	background-color: $green;
+  border-color: $green;
 }
 
 .wp-pagenavi span.current{
 	color: $white;
 	background-color: $green;
+  border-color: $green;
 }
 
 .wp-pagenavi a.u-desktop {

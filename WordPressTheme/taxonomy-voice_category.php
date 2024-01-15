@@ -101,7 +101,7 @@ $term_slug = $term->slug;
           <?php endwhile; ?>
         </div>
       </div>
-      <div class="page-voice__pagenavi wp-pagenavi">
+      <div class="page-voice__pagenavi">
         <?php if (function_exists('wp_pagenavi')) {
           wp_pagenavi();
         } ?>
