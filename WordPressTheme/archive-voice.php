@@ -51,8 +51,8 @@
           </ul>
         </div>
       </div>
-      <?php if (have_posts()) : ?>
       <div class="page-voice__body">
+        <?php if (have_posts()) : ?>
         <div class="text-cards">
           <?php while (have_posts()) : the_post(); ?>
           <div class="text-cards__item text-card">
@@ -61,10 +61,14 @@
                 <div class="text-card__meta">
                   <?php
                     $voiceInfo = get_field('voice_info');
+                    $voiceAge = $voiceInfo['voice_age'];
+                    $voiceGender = $voiceInfo['voice_gender'];
                     ?>
+                  <?php if(!empty($voiceAge) || !empty($voiceGender)): ?>
                   <div class="text-card__age">
-                    <?php echo $voiceInfo['voice_age'] . "(" . $voiceInfo['voice_gender'] . ")"; ?>
+                    <?php echo $voiceAge . "(" . $voiceGender . ")"; ?>
                   </div>
+                  <?php endif; ?>
                   <span class="text-card__category category-tag">
                     <?php
                       $terms = get_the_terms($post->ID, 'voice_category');
@@ -77,26 +81,35 @@
                 <h3 class="text-card__title"><?php the_title(); ?></h3>
               </div>
               <picture class="text-card__image colorbox js-colorbox">
-                <?php if (get_the_post_thumbnail()) : ?>
+                <?php if (has_post_thumbnail()) : ?>
                 <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像">
+                <?php else: ?>
+                <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>" alt="画像なし">
                 <?php endif; ?>
               </picture>
             </div>
+            <?php
+            $voiceText = get_field('voice_text');
+            if(!empty($voiceText)):
+            ?>
             <div class="text-card__body">
               <p class="text-card__text text">
-                <?php echo nl2br(get_field('voice_text')); ?>
+                <?php echo $voiceText; ?>
               </p>
             </div>
+            <?php endif; ?>
           </div>
           <?php endwhile; ?>
         </div>
+        <?php else : ?>
+        <p class="text">現在準備中です。</p>
+        <?php endif; ?>
       </div>
       <div class="page-voice__pagenavi">
         <?php if (function_exists('wp_pagenavi')) {
           wp_pagenavi();
         } ?>
       </div>
-      <?php endif; ?>
     </div>
   </div>
   <?php get_footer(); ?>

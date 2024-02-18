@@ -50,8 +50,8 @@ $contact = esc_url(home_url('/contact'));
           </div>
         </ul>
       </div>
-      <?php if (have_posts()) : ?>
       <div class="page-campaign__body">
+        <?php if (have_posts()) : ?>
         <div class="page-campaign__items">
           <?php while (have_posts()) : the_post(); ?>
           <div class="page-campaign__item panel">
@@ -79,13 +79,19 @@ $contact = esc_url(home_url('/contact'));
                 <div class="panel__price-box">
                   <?php
                     $campaignPrice = get_field('campaign_price');
-                    ?>
+                    $campaignRegularPrice = $campaignPrice['regular_price'];
+                    $campaignDiscountPrice = $campaignPrice['discount_price'];
+                  ?>
+                  <?php if(!empty($campaignRegularPrice)): ?>
                   <p class="panel__price">
-                    <?php echo "¥" . number_format($campaignPrice['regular_price'], 0, '', ','); ?>
+                    <?php echo "¥" . number_format($campaignRegularPrice, 0, '', ','); ?>
                   </p>
+                  <?php endif; ?>
+                  <?php if(!empty($campaignDiscountPrice)): ?>
                   <p class="panel__discount">
-                    <?php echo "¥".number_format($campaignPrice['discount_price'], 0, '', ','); ?>
+                    <?php echo "¥".number_format($campaignDiscountPrice, 0, '', ','); ?>
                   </p>
+                  <?php endif; ?>
                 </div>
               </div>
               <div class="panel__detail">
@@ -95,10 +101,14 @@ $contact = esc_url(home_url('/contact'));
                 <div class="panel__button">
                   <?php
                     $campaignPeriod = get_field('campaign_period');
+                    $campaignStartDate = $campaignPeriod['start_date'];
+                    $campaignEndDate = $campaignPeriod['end_date'];
                     ?>
+                  <?php if(!empty( $campaignStartDate ) || !empty($campaignEndDate)): ?>
                   <div class="panel__date">
                     <?php echo $campaignPeriod['start_date'] . "-" .  $campaignPeriod['end_date']; ?>
                   </div>
+                  <?php endif; ?>
                   <p class="panel__lead">ご予約・お問い合わせはコチラ</p>
                   <a href="<?php echo $contact; ?>" class="panel__link button"><span>Contact us</span></a>
                 </div>
@@ -107,6 +117,9 @@ $contact = esc_url(home_url('/contact'));
           </div>
           <?php endwhile; ?>
         </div>
+        <?php else: ?>
+        <p class="text">現在実施中のキャンペーンはございません。</p>
+        <?php endif; ?>
       </div>
 
       <div class="page-campaign__pagenavi">
@@ -114,7 +127,6 @@ $contact = esc_url(home_url('/contact'));
           wp_pagenavi();
         } ?>
       </div>
-      <?php endif; ?>
     </div>
   </div>
   <?php get_footer(); ?>

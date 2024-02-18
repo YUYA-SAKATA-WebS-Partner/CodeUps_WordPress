@@ -56,6 +56,8 @@ $blog = esc_url(home_url('/blog'));
               wp_pagenavi();
             } ?>
           </div>
+          <?php else: ?>
+          <p class="text">現在準備中です。</p>
           <?php endif; ?>
         </div>
         <!-- sidebar -->

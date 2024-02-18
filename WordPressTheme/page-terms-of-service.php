@@ -36,6 +36,8 @@
           <?php while (have_posts()) : the_post(); ?>
           <?php the_content(); ?>
           <?php endwhile; ?>
+          <?php else: ?>
+          <p class="text">現在準備中です。</p>
         </div>
         <?php endif; ?>
       </div>

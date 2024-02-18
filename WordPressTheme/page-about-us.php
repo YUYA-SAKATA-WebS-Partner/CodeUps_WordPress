@@ -73,7 +73,7 @@
       <div class="gallery__body">
         <?php
       $galleryImages = SCF::get_option_meta('theme_options_gallery', 'about_gallery');
-      foreach ($galleryImages as $galleryImage) {
+      foreach ($galleryImages as $galleryImage):
         $imageUrl = wp_get_attachment_image_src($galleryImage['gallery'], 'large');
         $alt = esc_html($galleryImage['alt-text']);
         if ($imageUrl) :
@@ -81,9 +81,11 @@
         <picture class="gallery__image js-modal-trigger">
           <img src="<?php echo $imageUrl[0]; ?>" alt="<?php echo $alt; ?>">
         </picture>
+        <?php else: ?>
+        <p class="text">現在準備中です。</p>
         <?php
         endif;
-      };
+      endforeach;
       ?>
       </div>
     </div>

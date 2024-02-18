@@ -32,7 +32,7 @@
       <div class="page-faq__accordions">
         <?php
         $faqs = SCF::get_option_meta('theme_options_faq', 'faq');
-        foreach ($faqs as $faq) {
+        foreach ($faqs as $faq):
           $faq_question = esc_html($faq['faq_question']);
           $faq_answer = esc_html($faq['faq_answer']);
           if ($faq_question && $faq_answer) :
@@ -52,7 +52,7 @@
           </div>
         </div>
         <?php endif;
-      };
+        endforeach;
       ?>
       </div>
     </div>

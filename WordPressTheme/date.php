@@ -35,19 +35,22 @@ $blog = esc_url(home_url('/blog'));
             <?php while (have_posts()) : the_post(); ?>
             <a href="<?php the_permalink(); ?>" class="cards__item card">
               <picture class="card__image">
-                <?php if (get_the_post_thumbnail()) : ?>
+                <?php if (has_post_thumbnail()) : ?>
                 <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像">
+                <?php else: ?>
+                <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>">
                 <?php endif; ?>
               </picture>
               <div class="card__body">
                 <time class="card__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m/d'); ?></time>
                 <h3 class="card__title"><?php the_title(); ?></h3>
                 <p class="card__text text">
-                  <?php echo get_the_excerpt(); ?>
+                  <?php echo the_excerpt(); ?>
                 </p>
               </div>
             </a>
             <?php endwhile; ?>
+            <?php endif; ?>
           </div>
           <!-- pagenavi -->
           <div class="two-column-template__pagenavi">
@@ -55,7 +58,6 @@ $blog = esc_url(home_url('/blog'));
                 wp_pagenavi();
               } ?>
           </div>
-          <?php endif; ?>
         </div>
         <!-- sidebar -->
         <?php get_sidebar(); ?>

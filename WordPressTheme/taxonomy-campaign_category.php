@@ -58,8 +58,8 @@ $term_slug = $term->slug;
         </ul>
       </div>
       <div class="page-campaign__body">
+        <?php if (have_posts()) : ?>
         <div class="page-campaign__items">
-          <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
           <div class="page-campaign__item panel">
             <?php if (has_post_thumbnail()) : ?>
@@ -113,8 +113,10 @@ $term_slug = $term->slug;
             </div>
           </div>
           <?php endwhile; ?>
-          <?php endif; ?>
         </div>
+        <?php else: ?>
+        <p class="text">現在実施中のキャンペーンはございません。</p>
+        <?php endif; ?>
       </div>
       <div class="page-campaign__pagenavi">
         <?php if (function_exists('wp_pagenavi')) {

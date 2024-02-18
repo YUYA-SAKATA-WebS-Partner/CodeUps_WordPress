@@ -140,6 +140,28 @@ jQuery(function ($) {
   });
 
   // =============================
+  // カテゴリータブ(campaign,voice)
+  // =============================
+  $('.js-tab-item').click(function () {
+    // クリックされたタブのデータ属性からカテゴリーを取得
+    var category = $(this).data('category');
+
+    // タブの表示を切り替えるための処理
+    $('.js-tab-content').hide();
+    $('.js-tab-item').removeClass('is-active');
+    $(this).toggleClass('is-active');
+
+    // カテゴリーが "all" の場合、すべての記事を表示
+    if (category === 'all') {
+      $('.js-tab-content').fadeIn();
+    } else {
+      // カテゴリーが "all" 以外の場合、該当するカテゴリーの記事のみを表示
+      $('.js-tab-content').filter('[data-category="' + category + '"]').fadeIn();
+    }
+    ;
+  });
+
+  // =============================
   // FAQアコーディオン
   // =============================
   $('.js-accordion-header').click(function () {
